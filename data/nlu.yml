@@ -89,9 +89,30 @@ nlu:
     - no
     - I don't like this
 
+- intent: distract_nurse
+  examples: |
+    - I am super hungry, can you pick some food for me?
+    - I am dirty now, can I get a new Pajamas
+    - I lost my important pictures in my cell room can you help me to take it?
+    - I am super thirsty, can you pick some thinks for me?
 - synonym: Mate
   examples: |
     - Person
     - this Person
     - guy
-    
+
+- intent: check_Infirmary_room
+  examples: |
+    - now I want to look around the [Infirmary](locations)
+    - now I want to check the [Infirmary](locations)
+    - have a look in [Infirmary](locations)
+
+
+- intent: mix_ingredient
+  examples: |
+    - I want to choose [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - [Rose](ingredients), [Aloe Vera](ingredients)
+    - I like to have [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - I choose [Dandelion](ingredients)
+    - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients) and [Dandelion](ingredients)

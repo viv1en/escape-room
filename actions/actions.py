@@ -93,6 +93,9 @@ class ShowLocationAction(Action):
             dispatcher.utter_message(text="Now you are not able check all locations")
 
 
+#infirmary_count = 0
+
+
 class AccessLocationInfirmary(Action):
     def name(self) -> Text:
         return "access_infirmary"
@@ -100,10 +103,57 @@ class AccessLocationInfirmary(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print(tracker.get_slot('get_punched'))
-        if tracker.get_slot('get_punched'):
-            dispatcher.utter_message(
-                text="Now you are in the Infirmary")
+      #  print(tracker.get_slot('get_punched'))
+       # global infirmary_count
+        if tracker.get_slot('get_punched') and tracker.get_slot('location_cell'):
+                #and 0 == infirmary_count:
+            dispatcher.utter_message(text="Now you are in the Infirmary")
+            dispatcher.utter_message(text="you are lying on a patient bed, a trainee nurse is taking care of you")
+            infirmary_count = 1
             return [SlotSet("location_Infirmary", True), SlotSet("location_cell", False), SlotSet('get_punched', False)]
         else:
             dispatcher.utter_message(text="You are not able in to Infirmary")
+
+class AbleCheck(Action):
+    def name(self) -> Text:
+        return "able_check"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print(tracker.get_slot('nurse_away'))
+        if tracker.get_slot('location_Infirmary') and tracker.get_slot('nurse_away'):
+            dispatcher.utter_message(text="Now you are alone")
+            dispatcher.utter_message(text="In this room there is a cabinet with 7 potions ingredients: Lavender, Dandelion. Sunflower, Cayenne Pepper, Aloe Vera, Bioluminescent Algae, Rose")
+            dispatcher.utter_message(text="A instructions for making sedative was left from the trainee nurse")
+            dispatcher.utter_message(text="The instructions for making sedative was written: There are four components of anesthetics, and you need to guess them correctly through riddles")
+            dispatcher.utter_message(text="1 : In moonlit fields, I dance with grace, A bloom of beauty, a soothing embrace. With petals yellow and sweet perfume, I'm the first ingredient, brightening the room.")
+            dispatcher.utter_message(text="2 : I'm forged in flames, a fiery birth, A spice so potent, I add zest to mirth. From the tropics, I bring the heat, A pinch of me makes the mixture complete.")
+            dispatcher.utter_message(text="3 : A leafy treasure, green and grand, An herb that heals with a gentle hand. With calming scent and medicinal touch, I'm the herb you seek, the third as such.")
+            dispatcher.utter_message(text="4 : From the depths of the ocean, I arise, A creature rare, hidden from prying eyes. With slimy skin and healing might, The final ingredient, glowing in the night.")
+            dispatcher.utter_message(text="If you want to get the sedative, choose the 4 correct ingredients please")
+            return [SlotSet("nurse_away", False)]
+        else:
+            dispatcher.utter_message(text="You can't check infirmary, you are not alone sofar")
+
+
+
+class Get_sedative(Action):
+    def name(self) -> Text:
+        return "get_sedative"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        entities = [e['value'] for e in tracker.latest_message['entities'] if e['entity'] == 'ingredients']
+        print(entities)
+        if len(entities) != 4:
+            dispatcher.utter_message(text='It failed! You need to give four ingredients')
+        else:
+            if 'Lavender' in entities and 'Sunflower' in entities and 'Cayenne Pepper' in entities and 'Bioluminescent Algae' in entities:
+                dispatcher.utter_message(text='Now you get the sedative!')
+                dispatcher.utter_message(text='After somedays, you getting well, and turnes back to the cell!')
+                dispatcher.utter_message(text='Now you are able to check locations, plan for the next step')
+                return [SlotSet('get_sedative', True),  SlotSet("location_Infirmary", False), SlotSet("location_cell", True)]
+            else:
+                dispatcher.utter_message(text='You guess the wrong ingredients!')

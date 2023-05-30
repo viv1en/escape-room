@@ -12,10 +12,14 @@ intents:
   - go_Infirmary
   - confirm_get_punched
   - deny_get_punched
+  - distract_nurse
+  - check_Infirmary_room
+  - mix_ingredient
 entities:
   - person
   - profession
   - locations
+  - ingredients
 slots:
   location_cell:
     type: bool
@@ -37,7 +41,7 @@ slots:
     initial_value: false
     mappings:
       - type: custom
-  Warden's office:
+  location_office:
     type: bool
     initial_value: false
     mappings:
@@ -78,9 +82,18 @@ slots:
       - type: from_intent
         intent: confirm_get_punched
         value: true
+  nurse_away:
+    type: bool
+    initial_value: false
+    mappings:
       - type: from_intent
-        intent: deny_get_punched
-        value: false
+        intent: distract_nurse
+        value: true
+  get_sedative:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
 responses:
   utter_greet:
   - text: "Hey! you are now a lawyer,locked in a cell, there are three cellmates around you, trying to escape. Everything is text based. Good luck! Please talk with your cellmate A, B, C. for getting more Information You have told them your information for getting trust, and your intent of escape."
@@ -99,11 +112,15 @@ Who am I?"
   - text: "Bye"
   utter_mateb_punch:
   - text: 'Cellmates: We need to punch you, so that you can go to the infirmary'
+  utter_able_check_inf:
+  - text: "Now you are alone, able to check infirmary"
 actions:
   - check_guess
   - check_asked_mates
   - show_collection
   - access_infirmary
+  - able_check
+  - get_sedative
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

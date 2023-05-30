@@ -40,3 +40,13 @@ stories:
     - action: access_infirmary
     - intent: deny_get_punched
     - action: access_infirmary
+- story: action with nurse and get infos of infirmary
+  steps:
+    - intent: check_Infirmary_room
+    - action: able_check
+    - intent: distract_nurse
+    - action: able_check
+- story:
+  steps:
+    - intent: mix_ingredient
+    - action: get_sedative
