@@ -1,0 +1,88 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-person",
+      "2": "I-person",
+      "3": "L-person",
+      "4": "U-person",
+      "5": "B-profession",
+      "6": "I-profession",
+      "7": "L-profession",
+      "8": "U-profession",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-person": 1,
+      "I-person": 2,
+      "L-person": 3,
+      "U-person": 4,
+      "B-profession": 5,
+      "I-profession": 6,
+      "L-profession": 7,
+      "U-profession": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  },
+  {
+    "tag_name": "role",
+    "ids_to_tags": {
+      "1": "B-A",
+      "2": "I-A",
+      "3": "L-A",
+      "4": "U-A",
+      "5": "B-cell mate",
+      "6": "I-cell mate",
+      "7": "L-cell mate",
+      "8": "U-cell mate",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-A": 1,
+      "I-A": 2,
+      "L-A": 3,
+      "U-A": 4,
+      "B-cell mate": 5,
+      "I-cell mate": 6,
+      "L-cell mate": 7,
+      "U-cell mate": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  },
+  {
+    "tag_name": "group",
+    "ids_to_tags": {
+      "1": "B-A",
+      "2": "I-A",
+      "3": "L-A",
+      "4": "U-A",
+      "5": "B-B",
+      "6": "I-B",
+      "7": "L-B",
+      "8": "U-B",
+      "9": "B-C",
+      "10": "I-C",
+      "11": "L-C",
+      "12": "U-C",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-A": 1,
+      "I-A": 2,
+      "L-A": 3,
+      "U-A": 4,
+      "B-B": 5,
+      "I-B": 6,
+      "L-B": 7,
+      "U-B": 8,
+      "B-C": 9,
+      "I-C": 10,
+      "L-C": 11,
+      "U-C": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

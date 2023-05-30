@@ -1,0 +1,42 @@
+version: "3.1"
+
+stories:
+
+- story: player start
+  steps:
+  - intent: greet
+  - action: utter_greet
+- story: talk A
+  steps:
+  - intent: talk_with_A
+  - action: utter_A_riddles
+  - intent: guess_mates
+  - action: check_guess
+- story: talk B
+  steps:
+  - intent: talk_with_B
+  - action: utter_B_riddles
+  - intent: guess_mates
+  - action: check_guess
+- story: talk C
+  steps:
+  - intent: talk_with_C
+  - action: utter_C_riddles
+  - intent: guess_mates
+  - action: check_guess
+- story: select cellmates
+  steps:
+    - intent: ask_join
+    - action: check_asked_mates
+- story: check locations
+  steps:
+    - intent: check_location
+    - action: show_collection
+- story: try to access in Infirmary
+  steps:
+    - intent: go_Infirmary
+    - action: utter_mateb_punch
+    - intent: confirm_get_punched
+    - action: access_infirmary
+    - intent: deny_get_punched
+    - action: access_infirmary

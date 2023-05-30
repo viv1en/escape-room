@@ -1,0 +1,97 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+
+- intent: talk_with_A
+  examples: |
+    - I want to talk with mate [A](person) 
+    - talk to [A](person)
+    - [A](person)
+- intent: talk_with_B
+  examples: |
+    - I want to talk with mate [B](person) 
+    - I want to chat with mate [B](person) 
+    - talk to [B](person)
+    - person [B](person)
+- intent: talk_with_C
+  examples: |
+    - I want to talk with mate [C](person) 
+    - I want to chat with mate [C](person) 
+    - talk to [C](person)
+    - person [C](person) 
+
+- intent: guess_mates
+  examples: |
+    - I think [A](person) is [Prison Guard](profession)?
+    - I think [B](person) is [Janitor](profession)?
+    - I think [C](person) is [Pilot](profession)?   
+    - I think you are a [Pilot](profession)?
+    - you must be a [Pilot](profession)?
+
+- intent: ask_join
+  examples: |
+    - I would like to add [A](person), [B](person),[C](person)
+    - I choose [A](person) and [B](person)
+    - I only like to pick [A](person)
+    - I don't want to pick anyone
+    - [A](person), [B](person),[C](person)
+    - [A](person), [B](person)
+
+- intent: check_location
+  examples: |
+    - I want to check locations 
+    - check locations
+    - locations
+- intent: go_Infirmary
+  examples: |
+    - I plan to access the [Infirmary](locations)
+    - [Infirmary](locations)
+    - I think I choose the [Infirmary](locations)
+
+- intent: confirm_get_punched
+  examples: |
+    - yes
+    - punch me
+    - it's ok
+
+- intent: deny_get_punched
+  examples: |
+    - no
+    - I don't like this
+
+- synonym: Mate
+  examples: |
+    - Person
+    - this Person
+    - guy
+    

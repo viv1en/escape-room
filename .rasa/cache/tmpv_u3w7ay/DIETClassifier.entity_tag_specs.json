@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-location",
+      "2": "I-location",
+      "3": "L-location",
+      "4": "U-location",
+      "5": "B-locations",
+      "6": "I-locations",
+      "7": "L-locations",
+      "8": "U-locations",
+      "9": "B-person",
+      "10": "I-person",
+      "11": "L-person",
+      "12": "U-person",
+      "13": "B-profession",
+      "14": "I-profession",
+      "15": "L-profession",
+      "16": "U-profession",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-location": 1,
+      "I-location": 2,
+      "L-location": 3,
+      "U-location": 4,
+      "B-locations": 5,
+      "I-locations": 6,
+      "L-locations": 7,
+      "U-locations": 8,
+      "B-person": 9,
+      "I-person": 10,
+      "L-person": 11,
+      "U-person": 12,
+      "B-profession": 13,
+      "I-profession": 14,
+      "L-profession": 15,
+      "U-profession": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

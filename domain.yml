@@ -1,0 +1,111 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - guess_mates
+  - talk_with_A
+  - talk_with_B
+  - talk_with_C
+  - ask_join
+  - check_location
+  - go_Infirmary
+  - confirm_get_punched
+  - deny_get_punched
+entities:
+  - person
+  - profession
+  - locations
+slots:
+  location_cell:
+    type: bool
+    initial_value: true
+    mappings:
+    - type: custom
+  location_Infirmary:
+    type: bool
+    initial_value: false
+    mappings:
+    - type: custom
+  location_Laundry_room:
+    type: bool
+    initial_value: false
+    mappings:
+    - type: custom
+  location_Kitchen:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  Warden's office:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+  person:
+    type: text
+    initial_value: None
+    mappings:
+    - type: from_entity
+      entity: person
+
+  profession:
+    type: text
+    initial_value: None
+   # influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: profession
+
+  select_member:
+    type: bool
+    initial_value: false
+      # influence_conversation: true
+    mappings:
+      - type: custom
+  kitchen_door:
+    type: bool
+    initial_value: false
+    # influence_conversation: true
+    mappings:
+      - type: custom
+  get_punched:
+    type: bool
+    initial_value: false
+    # influence_conversation: true
+    mappings:
+      - type: from_intent
+        intent: confirm_get_punched
+        value: true
+      - type: from_intent
+        intent: deny_get_punched
+        value: false
+responses:
+  utter_greet:
+  - text: "Hey! you are now a lawyer,locked in a cell, there are three cellmates around you, trying to escape. Everything is text based. Good luck! Please talk with your cellmate A, B, C. for getting more Information You have told them your information for getting trust, and your intent of escape."
+  utter_A_riddles:
+  - text: "A: Hi, if you want to talk with me you need to guess my profession at first. I wear a uniform, stern and tough, In this cell block, I've seen enough. Keys and bars are part of my day, Maintaining order, come what may.
+Who am I?"
+  utter_B_riddles:
+  - text: "B: Hi, if you want to talk with me you need to guess my profession at first. In this place, I clean and sweep, No task too dirty, no mess too deep. From mopping floors to taking out trash, My role is crucial, in every clash.
+Who am I?"
+  utter_C_riddles:
+  - text: "C: Hi, if you want to talk with me you need to guess my profession at first. I take to the skies, high and wide, A captain of the clouds, I glide. Navigating planes with skill and grace, Traversing borders, from place to place.
+Who am I?"
+  utter_mate_ratted:
+  - text: 'Because the mates know all your plan and intent, he ratted you out'
+  utter_goodbye:
+  - text: "Bye"
+  utter_mateb_punch:
+  - text: 'Cellmates: We need to punch you, so that you can go to the infirmary'
+actions:
+  - check_guess
+  - check_asked_mates
+  - show_collection
+  - access_infirmary
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+config:
+  store_entities_as_slots: true
