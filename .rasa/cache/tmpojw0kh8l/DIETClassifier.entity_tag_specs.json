@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ingredients",
+      "2": "I-ingredients",
+      "3": "L-ingredients",
+      "4": "U-ingredients",
+      "5": "B-items_in_Laundry_room",
+      "6": "I-items_in_Laundry_room",
+      "7": "L-items_in_Laundry_room",
+      "8": "U-items_in_Laundry_room",
+      "9": "B-locations",
+      "10": "I-locations",
+      "11": "L-locations",
+      "12": "U-locations",
+      "13": "B-person",
+      "14": "I-person",
+      "15": "L-person",
+      "16": "U-person",
+      "17": "B-profession",
+      "18": "I-profession",
+      "19": "L-profession",
+      "20": "U-profession",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ingredients": 1,
+      "I-ingredients": 2,
+      "L-ingredients": 3,
+      "U-ingredients": 4,
+      "B-items_in_Laundry_room": 5,
+      "I-items_in_Laundry_room": 6,
+      "L-items_in_Laundry_room": 7,
+      "U-items_in_Laundry_room": 8,
+      "B-locations": 9,
+      "I-locations": 10,
+      "L-locations": 11,
+      "U-locations": 12,
+      "B-person": 13,
+      "I-person": 14,
+      "L-person": 15,
+      "U-person": 16,
+      "B-profession": 17,
+      "I-profession": 18,
+      "L-profession": 19,
+      "U-profession": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

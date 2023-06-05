@@ -13,13 +13,31 @@ intents:
   - confirm_get_punched
   - deny_get_punched
   - distract_nurse
-  - check_Infirmary_room
+  - check_Infirmary
   - mix_ingredient
+  - go_Laundry_room
+  - check_Laundry_room
+  - openlockers
+  - go_Kitchen
+  - check_office_items
+  - guess_kitchen_code
+  - deal_with_food
+  - go_office
+  - phone_call
+  - answer_son
+
 entities:
   - person
   - profession
   - locations
   - ingredients
+  - items_in_Laundry_room
+  - numbercode
+  - vegetables
+  - dealwithfood
+  - items_in_office
+  - called_person
+  - answer_to_son
 slots:
   location_cell:
     type: bool
@@ -42,6 +60,11 @@ slots:
     mappings:
       - type: custom
   location_office:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  location_Heli_Pad:
     type: bool
     initial_value: false
     mappings:
@@ -94,6 +117,31 @@ slots:
     initial_value: false
     mappings:
       - type: custom
+  get_uniform:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  guards_fainted:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  phone_ready:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  phone_son:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  get_helicopter:
+   type: bool
+   initial_value: false
+   mappings:
+     - type: custom
 responses:
   utter_greet:
   - text: "Hey! you are now a lawyer,locked in a cell, there are three cellmates around you, trying to escape. Everything is text based. Good luck! Please talk with your cellmate A, B, C. for getting more Information You have told them your information for getting trust, and your intent of escape."
@@ -119,8 +167,18 @@ actions:
   - check_asked_mates
   - show_collection
   - access_infirmary
-  - able_check
+  - able_check_infirmary
   - get_sedative
+  - show_Laundry_room
+  - show_locker_puzzles_or_other_unuseful_items
+  - vertification_locker_puzzles
+  - show_Kitchen_code
+  - vertification_Kitchen_food
+  - vertification_Kitchens_code_and_show_kitchen_items
+  - vertification_guards_fainted_and_show_office_or_getcaught
+  - show_phone_or_other_unuseful_items
+  - vertification_call_with_npc_child_for_helicopter_and_show_puzzles
+  - check_answer_to_son
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

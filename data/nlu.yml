@@ -101,7 +101,7 @@ nlu:
     - this Person
     - guy
 
-- intent: check_Infirmary_room
+- intent: check_Infirmary
   examples: |
     - now I want to look around the [Infirmary](locations)
     - now I want to check the [Infirmary](locations)
@@ -116,3 +116,63 @@ nlu:
     - I like to have [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
     - I choose [Dandelion](ingredients)
     - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients) and [Dandelion](ingredients)
+
+- intent: go_Laundry_room
+  examples: |
+    - now I want to go to the [Laundry room](locations)
+    - now I want to check the [laundry room](locations)
+    - go [laundry room](locations)
+
+- intent: check_Laundry_room
+  examples: |
+    - now I want to check the [washing machines](items_in_Laundry_room)
+    - look at [lockers](items_in_Laundry_room)
+    - have a look in [lockers](items_in_Laundry_room)
+    - check the dirty [clothes basket](items_in_Laundry_room)
+    - dirty [clothes basket](items_in_Laundry_room)
+
+- intent: openlockers
+  examples: |
+    - [1](numbercode), [2](numbercode), [3](numbercode), [4](numbercode), [5](numbercode)
+    - [6](numbercode), [15](numbercode), [8](numbercode), [9](numbercode)
+    - [0](numbercode), [14](numbercode)
+    - [1](numbercode) [2](numbercode) [17](numbercode) [4](numbercode) [5](numbercode)
+    
+- intent: go_Kitchen
+  examples: |
+    - I want to go [Kitchen](locations)
+    - go [Kitchen](locations)
+    - move to [Kitchen](locations)
+- intent: guess_kitchen_code
+  examples: |
+    - I think it should be [cucumber](vegetables)
+    - Is that [Brocolli](vegetables)?
+    - [Brocolli](vegetables)?
+    - [Brocolli](vegetables)
+- intent: deal_with_food
+  examples: |
+    - [eat](dealwithfood)
+    - [drug](dealwithfood)
+- intent: go_office
+  examples: |
+    - I want to go Warden's [office](locations)
+    - go Warden's [office](locations)
+    - move to [office](locations)
+- intent: check_office_items
+  examples: |
+    - now I want to check the transparent [cabinet](items_in_office)
+    - look at [telephone](items_in_office)
+    - have a look in desk [lamp](items_in_office)
+    - check the dirty [chair](items_in_office)
+    - [telephone](items_in_office)
+
+- intent: phone_call
+  examples: |
+    - [Son](called_person)
+    - [Friend](called_person)
+
+- intent: answer_son
+  examples: |
+    - [Array](answer_to_son), [Linked List](answer_to_son), [Class](answer_to_son), [Queue](answer_to_son)
+    - [Array](answer_to_son) [Linked List](answer_to_son) [Class](answer_to_son) [Queue](answer_to_son)
+    - [Linked List](answer_to_son) [Class](answer_to_son) [Queue](answer_to_son)

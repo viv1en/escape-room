@@ -42,11 +42,59 @@ stories:
     - action: access_infirmary
 - story: action with nurse and get infos of infirmary
   steps:
-    - intent: check_Infirmary_room
-    - action: able_check
+    - intent: check_Infirmary
+    - action: able_check_infirmary
     - intent: distract_nurse
-    - action: able_check
-- story:
+    - action: able_check_infirmary
+- story: get sedative
   steps:
     - intent: mix_ingredient
     - action: get_sedative
+- story: go_Laundry_room
+  steps:
+    - intent: go_Laundry_room
+    - action: show_Laundry_room
+- story: check_Laundry_room
+  steps:
+    - intent: check_Laundry_room
+    - action: show_locker_puzzles_or_other_unuseful_items
+- story: unlock the lockers
+  steps:
+    - intent: openlockers
+    - action: vertification_locker_puzzles
+
+- story: go kitchen
+  steps:
+    - intent: go_Kitchen
+    - action: show_Kitchen_code
+- story: kitchen code
+  steps:
+    - intent: guess_kitchen_code
+    - action: vertification_Kitchens_code_and_show_kitchen_items
+
+- story: kitchen food
+  steps:
+    - intent: deal_with_food
+    - action: vertification_Kitchen_food
+
+- story: go office
+  steps:
+    - intent: go_office
+    - action: vertification_guards_fainted_and_show_office_or_getcaught
+
+- story: check office items
+  steps:
+    - intent: check_office_items
+    - action: show_phone_or_other_unuseful_items
+
+
+- story: phone call
+  steps:
+    - intent: phone_call
+    - action: vertification_call_with_npc_child_for_helicopter_and_show_puzzles
+
+- story: phone Son
+  steps:
+    - intent: answer_son
+    - action: check_answer_to_son
+
