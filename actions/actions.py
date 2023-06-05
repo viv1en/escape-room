@@ -375,13 +375,17 @@ class OfficePhone(Action):
             answers = [e['value'] for e in tracker.latest_message['entities'] if
                           e['entity'] == 'answer_to_son']
             print(answers)
-            if len(answers) != 4:
-                dispatcher.utter_message('Please give 4 answers')
-            elif answers[0]=='Array' and answers[1] == 'Linked List' and answers[2] == 'Class' and answers[3]== 'Queue':
-                dispatcher.utter_message('You answer correctly, the Son of pilot cellmate promisse you He will pick you up in a helicopter in half an hour.')
-                dispatcher.utter_message('You can check locations, choose where you want to go as next')
-                return [SlotSet('get_helicopter',True)]
+            if len(answers) == 4:
+                if ['Array', 'Linked List', 'Class', 'Queue']==answers:
+                    dispatcher.utter_message('You answer correctly, the Son of pilot cellmate promisse you He will pick you up in a helicopter in half an hour.')
+                    dispatcher.utter_message('You can check locations, choose where you want to go as next')
+                    return [SlotSet('get_helicopter',True)]
+                else:
+                    dispatcher.utter_message('You give the wrong answers')
+
             else:
-                dispatcher.utter_message('You give the wrong answers')
+                dispatcher.utter_message('Please give 4 answers')
         else:
             dispatcher.utter_message('You can not do this action')
+
+
