@@ -176,3 +176,9 @@ nlu:
     - [Array](answer_to_son), [Linked List](answer_to_son), [Class](answer_to_son), [Queue](answer_to_son)
     - [Array](answer_to_son) [Linked List](answer_to_son) [Class](answer_to_son) [Queue](answer_to_son)
     - [Linked List](answer_to_son) [Class](answer_to_son) [Queue](answer_to_son)
+
+- intent: go_Heli_Pad
+  examples: |
+    - I want to go [Heli Pad](locations)
+    - go [Heli Pad](locations)
+    - move to [Heli Pad](locations)

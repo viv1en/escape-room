@@ -97,4 +97,7 @@ stories:
   steps:
     - intent: answer_son
     - action: check_answer_to_son
-
+- story: go to Heli_Pad
+  steps:
+    - intent: go_Heli_Pad
+    - action: vertification_go_helipad

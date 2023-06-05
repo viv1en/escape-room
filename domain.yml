@@ -25,6 +25,7 @@ intents:
   - go_office
   - phone_call
   - answer_son
+  - go_Heli_Pad
 
 entities:
   - person
@@ -179,6 +180,7 @@ actions:
   - show_phone_or_other_unuseful_items
   - vertification_call_with_npc_child_for_helicopter_and_show_puzzles
   - check_answer_to_son
+  - vertification_go_helipad
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

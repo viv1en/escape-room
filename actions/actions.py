@@ -364,7 +364,7 @@ class OfficePhone(Action):
 
 
 
-class OfficePhone(Action):
+class OfficeSon(Action):
     def name(self) -> Text:
         return "check_answer_to_son"
 
@@ -388,4 +388,25 @@ class OfficePhone(Action):
         else:
             dispatcher.utter_message('You can not do this action')
 
+
+class GoHelipad(Action):
+    def name(self) -> Text:
+        return "vertification_go_helipad"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        if tracker.get_slot('get_helicopter'):
+            dispatcher.utter_message('You are now in the Heli Pad')
+            dispatcher.utter_message('The halicopter is waiting you')
+            dispatcher.utter_message('Before getting on the helicopter, have a final confrontation with M to try to get exculpatory evidence')
+            dispatcher.utter_message("You threaten M: 'If you do not agree to give me the evidence immediately, I will not take you out of prison.'")
+            dispatcher.utter_message("M: 'I must to escape before I can give you the evidence'")
+            dispatcher.utter_message("Finally make a decision on how you will handle M")
+            dispatcher.utter_message("Abandon him: You think this person is untrustworthy and don't need to waste your time.")
+            dispatcher.utter_message("Confront: Keep spending time with him, insist that he produce evidence, and get on the plane together.")
+            dispatcher.utter_message("Agree: You agree to let him board the plane and you are willing to believe that he will give you proof once he gets on the plane.")
+            return [SlotSet('location_Heli_Pad'), True]
+        else:
+            dispatcher.utter_message('The Hali_Pad is empty, try to search another locations first')
 
