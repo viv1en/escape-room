@@ -319,7 +319,7 @@ class OfficeItems(Action):
         if tracker.get_slot('location_office'):
             officeitem = [e['value'] for e in tracker.latest_message['entities'] if
                                e['entity'] == 'items_in_office']
-            if 'phone' in officeitem:
+            if 'telephone' in officeitem:
                 dispatcher.utter_message('You can use the phone to call a important person')
                 dispatcher.utter_message('Now the time runs, you can only call one person')
                 dispatcher.utter_message('Make a choice, to which Person you want to call')
@@ -406,7 +406,31 @@ class GoHelipad(Action):
             dispatcher.utter_message("Abandon him: You think this person is untrustworthy and don't need to waste your time.")
             dispatcher.utter_message("Confront: Keep spending time with him, insist that he produce evidence, and get on the plane together.")
             dispatcher.utter_message("Agree: You agree to let him board the plane and you are willing to believe that he will give you proof once he gets on the plane.")
-            return [SlotSet('location_Heli_Pad'), True]
+            return [SlotSet('location_Heli_Pad', True)]
         else:
             dispatcher.utter_message('The Hali_Pad is empty, try to search another locations first')
 
+
+
+class Ending(Action):
+    def name(self) -> Text:
+        return "ending"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        if tracker.get_slot('location_Heli_Pad'):
+            deal_M = [e['value'] for e in tracker.latest_message['entities'] if
+                       e['entity'] == 'deal_M']
+            if 'Agree' in deal_M:
+                dispatcher.utter_message('Your end: You successfully escaped from prison, but M did not keep his promise to give you evidence of exoneration, you have to spend the rest of your life in hiding, looking for evidence of exoneration')
+            elif 'Confront' in deal_M:
+                dispatcher.utter_message('Your end: As time gets tighter and tighter, M shows an anxious look and he finally pulls out the evidence for you. You gave him permission to board the helicopter. You managed to escape and were cleared of any guilt.')
+            elif 'Abandon' in deal_M:
+                dispatcher.utter_message('Your end: You directly choose to abandon M and board the helicopter, completely enraging M. He yanked you right out of the plane and wrestled with you. The guards came looking for you at the sound. You were caught back in prison.')
+            else:
+                dispatcher.utter_message('Please give a valid decision')
+
+
+        else:
+            dispatcher.utter_message('You are not able to do this action')

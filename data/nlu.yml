@@ -182,3 +182,10 @@ nlu:
     - I want to go [Heli Pad](locations)
     - go [Heli Pad](locations)
     - move to [Heli Pad](locations)
+- intent: deal_with_M
+  examples: |
+    - [Abandon](deal_M) him
+    - [Abandon](deal_M) 
+    - [Confront](deal_M)
+    - [Confront](deal_M) with him
+    - [Agree](deal_M)

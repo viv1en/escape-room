@@ -26,6 +26,7 @@ intents:
   - phone_call
   - answer_son
   - go_Heli_Pad
+  - deal_with_M
 
 entities:
   - person
@@ -39,6 +40,7 @@ entities:
   - items_in_office
   - called_person
   - answer_to_son
+  - deal_M
 slots:
   location_cell:
     type: bool
@@ -181,6 +183,7 @@ actions:
   - vertification_call_with_npc_child_for_helicopter_and_show_puzzles
   - check_answer_to_son
   - vertification_go_helipad
+  - ending
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
