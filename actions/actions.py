@@ -109,7 +109,7 @@ class AccessLocationInfirmary(Action):
             #and tracker.get_slot('location_cell')
                 #and 0 == infirmary_count:
             dispatcher.utter_message(text="Now you are in the Infirmary")
-            dispatcher.utter_message(text="you are lying on a patient bed, a trainee nurse is taking care of you")
+            dispatcher.utter_message(text="you are lying on a patient bed, a trainee nurse is taking care of you, please say something to her, make she go away")
             infirmary_count = 1
             return [SlotSet("location_Infirmary", True), SlotSet("location_cell", False), SlotSet('get_punched', False)]
         else:
@@ -217,7 +217,7 @@ class OpenLockers(Action):
             print(code)
             if len(code) != 5:
                 dispatcher.utter_message('Please give 5 digits code')
-            elif code == ['4','8','15','8','11']:
+            elif code == ['4','8','15','16','11']:
                 dispatcher.utter_message('You give the correct codes. Now the locker is opened.')
                 dispatcher.utter_message('You get the guards uniforms!')
                 dispatcher.utter_message('Nothing else is nessesary in the laundry room. You are back to your cell')
