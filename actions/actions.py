@@ -195,8 +195,8 @@ class Show_locker_puzzles_or_other_unuseful_items(Action):
                 dispatcher.utter_message(text='In the dirty clothes basket you find a note left behind" There are five riddles on the note')
                 dispatcher.utter_message(text='Clue 1: "The first digit is the square root of 16."')
                 dispatcher.utter_message(text='Clue 2: "The second digit is the sum of 3 and 5."')
-                dispatcher.utter_message(text='Clue 3: "The third digit is one less than the fourth digit."')
-                dispatcher.utter_message(text='Clue 4: "The fourth digit is twice the second digit."')
+                dispatcher.utter_message(text='Clue 3: "The third digit is the product of the numbers in the second clue."')
+                dispatcher.utter_message(text='Clue 4: "The fourth digit is twice the first digit."')
                 dispatcher.utter_message(text='Clue 5: "The fifth digit is the difference between the third digit and the first digit."')
             else:
                 dispatcher.utter_message(text='No such item in the laundry room, pls try again')
