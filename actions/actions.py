@@ -46,7 +46,7 @@ class CheckGuessAction(Action):
                     collect_infos_from_cellmates.append('room5')
                     collect_infos_from_cellmates.append('room6')
             else:
-                dispatcher.utter_message(text="Wrong！Game Over")
+                dispatcher.utter_message(text="Wrong！Try again")
         else:
             dispatcher.utter_message(text="I didn't understand you sorry. Could you please say that in a different manner ?")
 
@@ -125,13 +125,13 @@ class AbleCheck(Action):
         print(tracker.get_slot('nurse_away'))
         if tracker.get_slot('location_Infirmary') and tracker.get_slot('nurse_away'):
             dispatcher.utter_message(text="You are now alone in the infirmery, you can look around and do what you want . But you gotta do it fast cause the nurse might come back at any time")
-            dispatcher.utter_message(text="In this room there is a cabinet with 7 different potions/ingredients: Lavender, Dandelion. Sunflower, Cayenne Pepper, Aloe Vera, Bioluminescent Algae, Rose")
+            dispatcher.utter_message(text="In this room there is a cabinet with 5 different potions/ingredients: Lavender, Sunflower, Cayenne Pepper, Aloe Vera, Bioluminescent Algae")
             dispatcher.utter_message(text="A recipe with all instructions to making a very potent sedative fell off the pocket of the tarinee nurse when she reached down to grab the bandages")
             dispatcher.utter_message(text="Potent sedative recipe: There are four components of anesthetics, and you need to guess them correctly through riddles")
-            dispatcher.utter_message(text="1 : In moonlit fields, I dance with grace, A bloom of beauty, a soothing embrace. With petals yellow and sweet perfume, I'm the first ingredient, brightening the room.")
-            dispatcher.utter_message(text="2 : I'm forged in flames, a fiery birth, A spice so potent, I add zest to mirth. From the tropics, I bring the heat, A pinch of me makes the mixture complete.")
-            dispatcher.utter_message(text="3 : A leafy treasure, green and grand, An herb that heals with a gentle hand. With calming scent and medicinal touch, I'm the herb you seek, the third as such.")
-            dispatcher.utter_message(text="4 : From the depths of the ocean, I arise, A creature rare, hidden from prying eyes. With slimy skin and healing might, The final ingredient, glowing in the night.")
+            dispatcher.utter_message(text="1 : With a pleasant aroma, my name starts with L,Guess me now, a flower that rings a sweet bell.")
+            dispatcher.utter_message(text="2 : I am tall and bright, a flower so cheery,With petals golden, and seeds you can eat, oh so seedy.")
+            dispatcher.utter_message(text="3 : Spicy and red, I add the heat, Guess my name, this pepper so neat.")
+            dispatcher.utter_message(text="4 : In the depths of the ocean, a magical sight,Multiple words describe my light.")
             dispatcher.utter_message(text="If you want to get the sedative, type the right ingredients in order one after the other")
             #return [SlotSet("nurse_away", False)]
         else:
@@ -149,12 +149,12 @@ class Get_sedative(Action):
             entities = [e['value'] for e in tracker.latest_message['entities'] if e['entity'] == 'ingredients']
             print(entities)
             if len(entities) != 4:
-                dispatcher.utter_message(text='Nothing happened, you need 4 ingredients ')
+                dispatcher.utter_message(text='Nothing happened, you need 4 ingredients')
             else:
                 if 'Lavender' in entities and 'Sunflower' in entities and 'Cayenne Pepper' in entities and 'Bioluminescent Algae' in entities:
                     dispatcher.utter_message(text='A new potent chemical is formed , just the smell is making you sleepy . you acquired the sedative.')
                     dispatcher.utter_message(text='Laundry room is just in front of the infirmery , it is easy to access from this position')
-                    dispatcher.utter_message(text='The Map is available to you knwo , just type Map to see it')
+                    dispatcher.utter_message(text='The Map is available to you now, just type Map to see it')
                     return [SlotSet('get_sedative', True),  SlotSet("location_Infirmary", False), SlotSet("location_cell", True)]
                 else:
                     dispatcher.utter_message(text='The ingredients you guessed are wrong')
@@ -193,11 +193,11 @@ class Show_locker_puzzles_or_other_unuseful_items(Action):
 
             elif 'clothes basket' in checkitem:
                 dispatcher.utter_message(text='In the dirty clothes basket you find a note left behind" There are five riddles on the note')
-                dispatcher.utter_message(text='Clue 1: "The first digit is the square root of 16."')
-                dispatcher.utter_message(text='Clue 2: "The second digit is the sum of 3 and 5."')
-                dispatcher.utter_message(text='Clue 3: "The third digit is the product of the numbers in the second clue."')
-                dispatcher.utter_message(text='Clue 4: "The fourth digit is twice the first digit."')
-                dispatcher.utter_message(text='Clue 5: "The fifth digit is the difference between the third digit and the first digit."')
+                dispatcher.utter_message(text='Clue 1: "I am the first digit , but the second prime"')
+                dispatcher.utter_message(text='Clue 2: "I am the second digit in here , but I am the first prime"')
+                dispatcher.utter_message(text='Clue 3: "I am the lucky prime "')
+                dispatcher.utter_message(text='Clue 4: "I am the beginning but also the end , In addition I fade away and devided by I am infinity , I am neither positive nor negative I am also both"')
+                dispatcher.utter_message(text='Clue 5: "In card games people sometimes think I am number 6"')
             else:
                 dispatcher.utter_message(text='No such item in the laundry room, pls try again')
         else:
@@ -209,23 +209,29 @@ class OpenLockers(Action):
         return "vertification_locker_puzzles"
 
     def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
         if tracker.get_slot('location_Laundry_room'):
-            code = [e['value'] for e in tracker.latest_message['entities'] if
-                         e['entity'] == 'numbercode']
-            print(code)
-            if len(code) != 5:
+            # Extract the code as individual characters or numbers
+            code = [e['value'] for e in tracker.latest_message['entities'] if e['entity'] == 'numbercode']
+            # Concatenate the code into a single string
+            code_string = ''.join(code)
+
+            # Check if the code_string has 5 characters
+            if len(code_string) != 5:
                 dispatcher.utter_message('Please give the 5 digits code')
-            elif code == ['4','8','15','8','11']:
+            # Check if the code is correct
+            elif code_string == '32709':
                 dispatcher.utter_message('The codes worked and the locker is open now.')
                 dispatcher.utter_message('You grab the guards uniforms!')
-                dispatcher.utter_message('it does not look like there is anything else to do in the laundry room. You already got what need You should go back to your cell')
-                return [SlotSet('location_Laundry_room', False),SlotSet("location_cell", True), SlotSet('get_uniform', True)]
+                dispatcher.utter_message('It does not look like there is anything else to do in the laundry room. You already got what you need. You should go back to your cell.')
+                return [SlotSet('location_Laundry_room', False), SlotSet("location_cell", True), SlotSet('get_uniform', True)]
             else:
                 dispatcher.utter_message('You gave the wrong code')
         else:
-            dispatcher.utter_message(text="You can't do this, you are not in laundry room")
+            dispatcher.utter_message(text="You can't do this, you are not in the laundry room")
 
 
 class Gokitchen(Action):
@@ -237,7 +243,7 @@ class Gokitchen(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         if tracker.get_slot('get_uniform') == True:
             dispatcher.utter_message('You need to guess the correct vegetables from the puzzle to open the door')
-            dispatcher.utter_message("In the kitchen's realm of scraps and remains, seek the food that the dogs will claim. A taste of delight, they yearn to savor, find the dish that matches their favorite flavor. Look to the label, it holds the key, the name of the food that sets them free. It's not a meat, but something green, a vegetable that makes them keen. Search high and low, with keen eyesight, and choose the food that feels just right. What am I?")
+            dispatcher.utter_message(" I'm a green veggie which kids think I look like a tiny tree, they also don't like eating me. What am I?")
             dispatcher.utter_message('What is the correct vegtable ?')
             return [SlotSet('location_Kitchen', True)]
         else:
@@ -350,11 +356,11 @@ class OfficePhone(Action):
                 dispatcher.utter_message('He reported you, and you are locked up again')
             elif 'Son' in calledperson:
                 dispatcher.utter_message("The call to the pilot's son went well, you explained the current situation and requested that he could fly a plane to the prison's Heli_Pad to rescue you.")
-                dispatcher.utter_message("The pilot's son says he'll say yes if you can help him answer the following questions correctly")
-                dispatcher.utter_message("Riddle 1: I'm a collection of elements, orderly arranged, With a fixed size and type, never to be changed. Sequential access is how I'm designed, Efficiency is key, in memory I'm confined. What am I?")
-                dispatcher.utter_message("Riddle 2: I'm like a chain, linking nodes in a line, Traversing me forwards or backwards is fine. I'm flexible, dynamic, and efficient too, Adding or removing elements, I can easily do. What am I?")
-                dispatcher.utter_message("Riddle 3: I'm a type, a blueprint of data and behavior, Encapsulating objects, I'm a powerful savior. Inheritance and polymorphism, I embrace, Creating instances, bringing code to life's embrace. What am I?")
-                dispatcher.utter_message("Riddle 4: I'm a line, where elements wait in turn, First come, first serve, that's how I churn. Enqueue and dequeue, actions I take, Used in printing, processes, and more, give me a break. What am I?")
+                dispatcher.utter_message("The pilot's son says he'll say yes if you can help him answer the following programming questions correctly")
+                dispatcher.utter_message("Riddle 1: I am an ordered collection, with elements in line, in Excel I'm called a table, what am I?")
+                dispatcher.utter_message("Riddle 2: To keep track of you task you create a To-Do what ? the word you need starts with L")
+                dispatcher.utter_message("Riddle 3: In real life you can use a bottle to store some water , in programming, you use me, a handy holder of values, you see. What am I?")
+                dispatcher.utter_message("Riddle 4: What do you call a line of people all waiting to buy something ? ")
                 dispatcher.utter_message("Answer the riddlles in order . Type the answers one after the other ")
                 return [SlotSet('phone_son',True)]
             else:
@@ -376,7 +382,7 @@ class OfficeSon(Action):
                           e['entity'] == 'answer_to_son']
             print(answers)
             if len(answers) == 4:
-                if ['Array', 'Linked List', 'Class', 'Queue']==answers:
+                if ['Array', 'List', 'Variable', 'Queue']==answers:
                     dispatcher.utter_message('You answer correctly, the Son of pilot  promisses you He will pick you up in a helicopter in half an hour.')
                     dispatcher.utter_message('You need to go where the helicopter will land and be ready , because you will not have much time . Hint: you can pull out the Map to see where you should go to next')
                     return [SlotSet('get_helicopter',True)]

@@ -236,10 +236,24 @@ nlu:
   examples: |
     - I want to choose [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
     - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
-    - [Rose](ingredients), [Aloe Vera](ingredients)
-    - I like to have [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
-    - I choose [Dandelion](ingredients)
-    - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients) and [Dandelion](ingredients)
+    - The ingredients are [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - I like to have [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - I choose [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Sunflower](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Bioluminescent Algae](ingredients) [Sunflower](ingredients) [Cayenne Pepper](ingredients) 
+    - [Lavender](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients) [Cayenne Pepper](ingredients) 
+    - [Bioluminescent Algae](ingredients) [Lavender](ingredients) [Sunflower](ingredients) [Cayenne Pepper](ingredients)
+    - [Sunflower](ingredients) [Cayenne Pepper](ingredients) [Lavender](ingredients) [Bioluminescent Algae](ingredients)
+    - [Sunflower](ingredients) [Lavender](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients)
+    - [Sunflower](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients) [Lavender](ingredients)
+    - [Sunflower](ingredients) [Lavender](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
+    - [Cayenne Pepper](ingredients) [Lavender](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients) [Cayenne Pepper](ingredients)
+    
 
 - intent: go_Laundry_room
   examples: |
@@ -289,11 +303,10 @@ nlu:
 
 - intent: openlockers
   examples: |
-    - [1](numbercode), [2](numbercode), [3](numbercode), [4](numbercode), [5](numbercode)
-    - [6](numbercode), [15](numbercode), [8](numbercode), [9](numbercode)
-    - [0](numbercode), [14](numbercode)
-    - [1](numbercode) [2](numbercode) [17](numbercode) [4](numbercode) [5](numbercode)
-    
+    - [3](numbercode), [2](numbercode), [7](numbercode), [0](numbercode), [9](numbercode)
+    - [3](numbercode) [2](numbercode) [7](numbercode) [0](numbercode) [9](numbercode)
+    - [3](numbercode)[2](numbercode)[7](numbercode)[0](numbercode)[9](numbercode)
+    - [32709](numbercode)
 - intent: go_Kitchen
   examples: |
     - I want to go to the [Kitchen](locations).
@@ -319,24 +332,27 @@ nlu:
     
 - intent: guess_kitchen_code
   examples: |
-    - I think it should be [cucumber](vegetables)
+    - I think it should be [Brocolli](vegetables)
     - Is that [Brocolli](vegetables)?
     - [Brocolli](vegetables)?
     - [Brocolli](vegetables)
-    - Maybe the code is [cucumber](vegetables).
+    - [Broccolli](vegetables)
+    - [Broccoli](vegetables)
+    - [Brocolli](vegetables)
+    - Maybe the code is [Brocolli](vegetables).
     - Could it be [Broccoli](vegetables)?
     - How about [Broccoli](vegetables)?
-    - I'm guessing it might be [cucumber](vegetables).
+    - I'm guessing it might be [Broccoli](vegetables).
     - Is it possible that it's [Broccoli](vegetables)?
     - What if the code is [Broccoli](vegetables)?
-    - [cucumber](vegetables) seems like a possible option.
+    - [Broccoli](vegetables) seems like a possible option.
     - I have a feeling it could be [Broccoli](vegetables).
     - Let's try [Broccoli](vegetables) as the code.
-    - [cucumber](vegetables) is my best guess.
+    - [Broccoli](vegetables) is my best guess.
     - I'm leaning towards [Broccoli](vegetables) for the code.
-    - [cucumber](vegetables) is a potential choice for the code.
+    - [Broccoli](vegetables) is a potential choice for the code.
     - Perhaps it's [Broccoli](vegetables) that we're looking for.
-    - The code might be [cucumber](vegetables) after all.
+    - The code might be [Broccoli](vegetables) after all.
     - I believe [Broccoli](vegetables) could be the code.
 
 - intent: deal_with_food
@@ -402,9 +418,26 @@ nlu:
 
 - intent: answer_son
   examples: |
-    - [Array](answer_to_son), [Linked List](answer_to_son), [Class](answer_to_son), [Queue](answer_to_son)
-    - [Array](answer_to_son) [Linked List](answer_to_son) [Class](answer_to_son) [Queue](answer_to_son)
-    - [Linked List](answer_to_son) [Class](answer_to_son) [Queue](answer_to_son)
+    - [Array](answer_to_son), [List](answer_to_son), [Variable](answer_to_son), [Queue](answer_to_son)
+    - [Array](answer_to_son) [List](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son)
+
+    - [List](answer_to_son) [Array](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son)
+    - [List](answer_to_son) [Variable](answer_to_son) [Array](answer_to_son)  [Queue](answer_to_son)
+    - [List](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son) [Array](answer_to_son)
+
+    - [List](answer_to_son) [Array](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son)
+    - [Array](answer_to_son) [Variable](answer_to_son) [List](answer_to_son) [Queue](answer_to_son)
+    - [Array](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son) [List](answer_to_son)
+
+    - [Variable](answer_to_son) [Array](answer_to_son) [List](answer_to_son) [Queue](answer_to_son)
+    - [Array](answer_to_son) [Variable](answer_to_son) [List](answer_to_son) [Queue](answer_to_son)
+    - [Array](answer_to_son) [List](answer_to_son) [Queue](answer_to_son) [Variable](answer_to_son)
+
+    - [Queue](answer_to_son) [Array](answer_to_son) [List](answer_to_son) [Variable](answer_to_son)
+    - [Array](answer_to_son) [Queue](answer_to_son) [List](answer_to_son) [Variable](answer_to_son)
+    - [Array](answer_to_son) [List](answer_to_son) [Queue](answer_to_son) [Variable](answer_to_son)
+    
+    
 
 - intent: go_Heli_Pad
   examples: |
