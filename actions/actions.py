@@ -130,7 +130,7 @@ class AbleCheck(Action):
             dispatcher.utter_message(text="Potent sedative recipe: There are four components of anesthetics, and you need to guess them correctly through riddles")
             dispatcher.utter_message(text="1 : With a pleasant aroma, my name starts with L,Guess me now, a flower that rings a sweet bell.")
             dispatcher.utter_message(text="2 : I am tall and bright, a flower so cheery,With petals golden, and seeds you can eat, oh so seedy.")
-            dispatcher.utter_message(text="3 : Spicy and red, I add the heat, Guess my name, this pepper so neat.")
+            dispatcher.utter_message(text="3 : Spicy and red, I add the heat, Guess my name, this pepper so neat .")
             dispatcher.utter_message(text="4 : In the depths of the ocean, a magical sight,Multiple words describe my light.")
             dispatcher.utter_message(text="If you want to get the sedative, type the right ingredients in order one after the other")
             #return [SlotSet("nurse_away", False)]
