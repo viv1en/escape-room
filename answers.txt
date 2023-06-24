@@ -1,4 +1,4 @@
 Lavender, Sunflower, Cayenne Pepper, Bioluminescent Algae  
 Brocolli
 3 2 7 0 9
-Array, Linked List, Class, Queue
+'Array', 'List', 'Variable', 'Queue'

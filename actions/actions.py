@@ -9,7 +9,7 @@ collect_infos_from_cellmates = []
 
 class CheckGuessAction(Action):
     def name(self) -> Text:
-        return "check_guess"
+        return "action_check_guess"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -62,7 +62,7 @@ class CheckGuessAction(Action):
 
 class CheckSelectAction(Action):
     def name(self) -> Text:
-        return "check_asked_mates"
+        return "action_check_asked_mates"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -80,11 +80,23 @@ class CheckSelectAction(Action):
 
 class ShowLocationAction(Action):
     def name(self) -> Text:
-        return "show_collection"
+        return "action_show_collection"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        if tracker.get_slot('location_Heli_Pad'):
+            dispatcher.utter_message('You are now in the Heli_Pad ')
+        elif tracker.get_slot('location_cell'):
+            dispatcher.utter_message('You are now in the cell ')
+        elif tracker.get_slot('location_Infirmary'):
+            dispatcher.utter_message('You are now in the Infirmary ')
+        elif tracker.get_slot('location_Laundry_room'):
+            dispatcher.utter_message('You are now in the Laundry_room ')
+        elif tracker.get_slot('location_Kitchen'):
+            dispatcher.utter_message('You are now in the Kitchen ')
+        elif tracker.get_slot('location_office'):
+            dispatcher.utter_message("You are now in the Warden's office"  )
         print(tracker.get_slot('select_member'))
         if tracker.get_slot('select_member'):
             dispatcher.utter_message(
@@ -98,7 +110,7 @@ class ShowLocationAction(Action):
 
 class AccessLocationInfirmary(Action):
     def name(self) -> Text:
-        return "access_infirmary"
+        return "action_access_infirmary"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -117,7 +129,7 @@ class AccessLocationInfirmary(Action):
 
 class AbleCheck(Action):
     def name(self) -> Text:
-        return "able_check_infirmary"
+        return "action_able_check_infirmary"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -141,7 +153,7 @@ class AbleCheck(Action):
 
 class Get_sedative(Action):
     def name(self) -> Text:
-        return "get_sedative"
+        return "action_get_sedative"
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -155,7 +167,7 @@ class Get_sedative(Action):
                     dispatcher.utter_message(text='A new potent chemical is formed , just the smell is making you sleepy . you acquired the sedative.')
                     dispatcher.utter_message(text='Laundry room is just in front of the infirmery , it is easy to access from this position')
                     dispatcher.utter_message(text='The Map is available to you now, just type Map to see it')
-                    return [SlotSet('get_sedative', True),  SlotSet("location_Infirmary", False), SlotSet("location_cell", True)]
+                    return [SlotSet('get_sedative', True),  SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Laundry_room", False),SlotSet("location_office", False)]
                 else:
                     dispatcher.utter_message(text='The ingredients you guessed are wrong')
         else:
@@ -164,7 +176,7 @@ class Get_sedative(Action):
 
 class ShowLaundryRoom(Action):
     def name(self) -> Text:
-        return "show_Laundry_room"
+        return "action_show_Laundry_room"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -172,12 +184,12 @@ class ShowLaundryRoom(Action):
         dispatcher.utter_message(text='Now you are alone in the laundry room')
         dispatcher.utter_message(text='You look around and  see some lockers, some washing machines, and a dirty clothes basket')
         dispatcher.utter_message(text='You can check those, who knows maybe you will find something useful')
-        return [SlotSet('location_Laundry_room', True), SlotSet("location_Infirmary", False),SlotSet("location_cell", False)]
+        return [SlotSet('location_Laundry_room', True), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
 
 
 class Show_locker_puzzles_or_other_unuseful_items(Action):
     def name(self) -> Text:
-        return "show_locker_puzzles_or_other_unuseful_items"
+        return "action_show_locker_puzzles_or_other_unuseful_items"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -206,7 +218,7 @@ class Show_locker_puzzles_or_other_unuseful_items(Action):
 
 class OpenLockers(Action):
     def name(self) -> Text:
-        return "vertification_locker_puzzles"
+        return "action_vertification_locker_puzzles"
 
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
@@ -226,8 +238,8 @@ class OpenLockers(Action):
             elif code_string == '32709':
                 dispatcher.utter_message('The codes worked and the locker is open now.')
                 dispatcher.utter_message('You grab the guards uniforms!')
-                dispatcher.utter_message('It does not look like there is anything else to do in the laundry room. You already got what you need. You should go back to your cell.')
-                return [SlotSet('location_Laundry_room', False), SlotSet("location_cell", True), SlotSet('get_uniform', True)]
+                dispatcher.utter_message('It does not look like there is anything else to do in the laundry room. You already got what you need. You are going back to your cell.')
+                return [SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False), SlotSet("location_cell", True), SlotSet('get_uniform', True)]
             else:
                 dispatcher.utter_message('You gave the wrong code')
         else:
@@ -236,7 +248,7 @@ class OpenLockers(Action):
 
 class Gokitchen(Action):
     def name(self) -> Text:
-        return "show_Kitchen_code"
+        return "action_show_Kitchen_code"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -245,13 +257,13 @@ class Gokitchen(Action):
             dispatcher.utter_message('You need to guess the correct vegetables from the puzzle to open the door')
             dispatcher.utter_message(" I'm a green veggie which kids think I look like a tiny tree, they also don't like eating me. What am I?")
             dispatcher.utter_message('What is the correct vegtable ?')
-            return [SlotSet('location_Kitchen', True)]
+            return [SlotSet('location_Kitchen', True),SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
         else:
             dispatcher.utter_message(' You ran into the patrol officers, you got caught immediatly game over. What is the point of going through the trouble of stealing the guards uniforms if you are not going to use them -_-')
 
 class KitchenCode(Action):
     def name(self) -> Text:
-        return "vertification_Kitchens_code_and_show_kitchen_items"
+        return "action_vertification_Kitchens_code_and_show_kitchen_items"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -274,7 +286,7 @@ class KitchenCode(Action):
 
 class KitchenFood(Action):
     def name(self) -> Text:
-        return "vertification_Kitchen_food"
+        return "action_vertification_Kitchen_food"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -289,7 +301,7 @@ class KitchenFood(Action):
                 if tracker.get_slot('get_sedative'):
                     dispatcher.utter_message('You successfuly put the sedatives in the food , the guards should be asleep soon')
                     dispatcher.utter_message('Where do you want to go to next ?')
-                    return [SlotSet('location_Kitchen',False),SlotSet('guards_fainted',True)]
+                    return [SlotSet('guards_fainted',True)]
                 elif tracker.get_slot('get_sedative') == False:
                     dispatcher.utter_message("You don't have the sedative to lace the food")
                     dispatcher.utter_message("You need to get the sedative from another location first")
@@ -301,7 +313,7 @@ class KitchenFood(Action):
 
 class OfficeIn(Action):
     def name(self) -> Text:
-        return "vertification_guards_fainted_and_show_office_or_getcaught"
+        return "action_vertification_guards_fainted_and_show_office_or_getcaught"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -312,12 +324,12 @@ class OfficeIn(Action):
             dispatcher.utter_message('As the guards are all asleep including the warden you just walk into the wardens office .')
             dispatcher.utter_message('You look around and see a transparent cabinet, a telephone on the desk. There is a chair, and a desk lamp.')
             dispatcher.utter_message('try to find something useful')
-            return [SlotSet('location_office', True)]
+            return [SlotSet('location_office', True),SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False)]
 
 
 class OfficeItems(Action):
     def name(self) -> Text:
-        return "show_phone_or_other_unuseful_items"
+        return "action_show_phone_or_other_unuseful_items"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -343,7 +355,7 @@ class OfficeItems(Action):
 
 class OfficePhone(Action):
     def name(self) -> Text:
-        return "vertification_call_with_npc_child_for_helicopter_and_show_puzzles"
+        return "action_vertification_call_with_npc_child_for_helicopter_and_show_puzzles"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -372,7 +384,7 @@ class OfficePhone(Action):
 
 class OfficeSon(Action):
     def name(self) -> Text:
-        return "check_answer_to_son"
+        return "action_check_answer_to_son"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -397,7 +409,7 @@ class OfficeSon(Action):
 
 class GoHelipad(Action):
     def name(self) -> Text:
-        return "vertification_go_helipad"
+        return "action_vertification_go_helipad"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -412,7 +424,7 @@ class GoHelipad(Action):
             dispatcher.utter_message("Abandon him: You think this person is untrustworthy and don't need to waste your time.")
             dispatcher.utter_message("Confront: Keep spending time with him, insist that he produce evidence, and get on the plane together.")
             dispatcher.utter_message("Agree: You agree to let him board the plane and you are willing to believe that he will give you proof once he gets on the plane.")
-            return [SlotSet('location_Heli_Pad', True)]
+            return [SlotSet('location_Heli_Pad', True),SlotSet('location_Laundry_room', False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
         else:
             dispatcher.utter_message('The Hali_Pad is empty, try to search another locations first')
 
@@ -420,7 +432,7 @@ class GoHelipad(Action):
 
 class Ending(Action):
     def name(self) -> Text:
-        return "ending"
+        return "action_ending"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

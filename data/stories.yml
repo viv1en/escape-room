@@ -11,98 +11,118 @@ stories:
   - intent: talk_with_A
   - action: utter_A_riddles
   - intent: guess_mates
-  - action: check_guess
+  - action: action_check_guess
 - story: talk B
   steps:
   - intent: talk_with_B
   - action: utter_B_riddles
   - intent: guess_mates
-  - action: check_guess
+  - action: action_check_guess
 - story: talk C
   steps:
   - intent: talk_with_C
   - action: utter_C_riddles
   - intent: guess_mates
-  - action: check_guess
+  - action: action_check_guess
 - story: select cellmates
   steps:
     - intent: ask_join
-    - action: check_asked_mates
+    - action: action_check_asked_mates
 - story: check locations
   steps:
     - intent: check_location
-    - action: show_collection
+    - action: action_show_collection
 - story: try to access in Infirmary
   steps:
     - intent: go_Infirmary
     - action: utter_mateb_punch
+# - story: confirm get punched
+   # steps:
     - intent: confirm_get_punched
-    - action: access_infirmary
+    - action: action_access_infirmary
+# - story: deny
+    # steps:
     - intent: deny_get_punched
-    - action: access_infirmary
+    - action: action_access_infirmary
 - story: action with nurse and get infos of infirmary
   steps:
-    - intent: check_Infirmary
-    - action: able_check_infirmary
+  #  - intent: check_Infirmary
+   # - action: action_able_check_infirmary
     - intent: distract_nurse
-    - action: able_check_infirmary
+    - action: action_able_check_infirmary
 - story: get sedative
   steps:
     - intent: mix_ingredient
-    - action: get_sedative
+    - action: action_get_sedative
+
+- story: check locations
+  steps:
+    - intent: check_location
+    - action: action_show_collection
 - story: go_Laundry_room
   steps:
     - intent: go_Laundry_room
-    - action: show_Laundry_room
+    - action: action_show_Laundry_room
 - story: check_Laundry_room
   steps:
     - intent: check_Laundry_room
-    - action: show_locker_puzzles_or_other_unuseful_items
+    - action: action_show_locker_puzzles_or_other_unuseful_items
 - story: unlock the lockers
   steps:
     - intent: openlockers
-    - action: vertification_locker_puzzles
-
+    - action: action_vertification_locker_puzzles
+- story: check locations
+  steps:
+    - intent: check_location
+    - action: action_show_collection
 - story: go kitchen
   steps:
     - intent: go_Kitchen
-    - action: show_Kitchen_code
+    - action: action_show_Kitchen_code
 - story: kitchen code
   steps:
     - intent: guess_kitchen_code
-    - action: vertification_Kitchens_code_and_show_kitchen_items
+    - action: action_vertification_Kitchens_code_and_show_kitchen_items
 
 - story: kitchen food
   steps:
     - intent: deal_with_food
-    - action: vertification_Kitchen_food
-
+    - action: action_vertification_Kitchen_food
+- story: check locations
+  steps:
+    - intent: check_location
+    - action: action_show_collection
 - story: go office
   steps:
     - intent: go_office
-    - action: vertification_guards_fainted_and_show_office_or_getcaught
+    - action: action_vertification_guards_fainted_and_show_office_or_getcaught
 
-- story: check office items
-  steps:
+#- story: check office items
+  #steps:
     - intent: check_office_items
-    - action: show_phone_or_other_unuseful_items
+    - action: action_show_phone_or_other_unuseful_items
 
 
-- story: phone call
-  steps:
+#- story: phone call
+ # steps:
     - intent: phone_call
-    - action: vertification_call_with_npc_child_for_helicopter_and_show_puzzles
+    - action: action_vertification_call_with_npc_child_for_helicopter_and_show_puzzles
 
-- story: phone Son
-  steps:
+#- story: phone Son
+ # steps:
     - intent: answer_son
-    - action: check_answer_to_son
-- story: go to Heli_Pad
+    - action: action_check_answer_to_son
+
+- story: check locations
   steps:
+    - intent: check_location
+    - action: action_show_collection
+#- story: go to Heli_Pad
+ # steps:
     - intent: go_Heli_Pad
-    - action: vertification_go_helipad
+    - action: action_vertification_go_helipad
 
 - story: storyending
   steps:
     - intent: deal_with_M
-    - action: ending
+    - action: action_ending

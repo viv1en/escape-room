@@ -1,0 +1,74 @@
+version: "3.1"
+
+rules:
+- rule: check map show locations
+  steps:
+    - intent: check_location
+    - action: action_show_collection
+- rule: go kitchen
+  steps:
+    - intent: go_Kitchen
+    - action: action_show_Kitchen_code
+- rule: kitchen code
+  steps:
+    - intent: guess_kitchen_code
+    - action: action_vertification_Kitchens_code_and_show_kitchen_items
+
+- rule: kitchen food
+  steps:
+    - intent: deal_with_food
+    - action: action_vertification_Kitchen_food
+- rule: go office
+  steps:
+    - intent: go_office
+    - action: action_vertification_guards_fainted_and_show_office_or_getcaught
+
+- rule: check office items
+  steps:
+    - intent: check_office_items
+    - action: action_show_phone_or_other_unuseful_items
+
+
+- rule: phone call
+  steps:
+    - intent: phone_call
+    - action: action_vertification_call_with_npc_child_for_helicopter_and_show_puzzles
+
+- rule: phone Son
+  steps:
+    - intent: answer_son
+    - action: action_check_answer_to_son
+- rule: try to access in Infirmary
+  steps:
+    - intent: go_Infirmary
+    - action: utter_mateb_punch
+- rule: confirm get punched
+  steps:
+    - intent: confirm_get_punched
+    - action: action_access_infirmary
+- rule: deny
+  steps:
+    - intent: deny_get_punched
+    - action: action_access_infirmary
+- rule: action with nurse and get infos of infirmary
+  steps:
+  #  - intent: check_Infirmary
+   # - action: action_able_check_infirmary
+    - intent: distract_nurse
+    - action: action_able_check_infirmary
+- rule: get sedative
+  steps:
+    - intent: mix_ingredient
+    - action: action_get_sedative
+- rule: check locations
+  steps:
+    - intent: check_location
+    - action: action_show_collection
+- rule: go to Heli_Pad
+  steps:
+    - intent: go_Heli_Pad
+    - action: action_vertification_go_helipad
+- rule: storyending
+  steps:
+    - intent: deal_with_M
+    - action: action_ending

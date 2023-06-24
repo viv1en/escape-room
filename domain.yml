@@ -168,24 +168,24 @@ Who am I?"
   utter_able_check_inf:
   - text: "You are now alone in the infirmary, you can look around and do what you want. But you gotta do it fast cause the nurse might come back at any time!"
 actions:
-  - check_guess
-  - check_asked_mates
-  - show_collection
-  - access_infirmary
-  - able_check_infirmary
-  - get_sedative
-  - show_Laundry_room
-  - show_locker_puzzles_or_other_unuseful_items
-  - vertification_locker_puzzles
-  - show_Kitchen_code
-  - vertification_Kitchen_food
-  - vertification_Kitchens_code_and_show_kitchen_items
-  - vertification_guards_fainted_and_show_office_or_getcaught
-  - show_phone_or_other_unuseful_items
-  - vertification_call_with_npc_child_for_helicopter_and_show_puzzles
-  - check_answer_to_son
-  - vertification_go_helipad
-  - ending
+  - action_check_guess
+  - action_check_asked_mates
+  - action_show_collection
+  - action_access_infirmary
+  - action_able_check_infirmary
+  - action_get_sedative
+  - action_show_Laundry_room
+  - action_show_locker_puzzles_or_other_unuseful_items
+  - action_vertification_locker_puzzles
+  - action_show_Kitchen_code
+  - action_vertification_Kitchen_food
+  - action_vertification_Kitchens_code_and_show_kitchen_items
+  - action_vertification_guards_fainted_and_show_office_or_getcaught
+  - action_show_phone_or_other_unuseful_items
+  - action_vertification_call_with_npc_child_for_helicopter_and_show_puzzles
+  - action_check_answer_to_son
+  - action_vertification_go_helipad
+  - action_ending
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
