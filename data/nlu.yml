@@ -469,3 +469,51 @@ nlu:
     - [Confront](deal_M)
     - [Confront](deal_M) with him
     - [Agree](deal_M)
+
+- synonym: Prison Guard
+  examples: |
+    - Guard
+    - guard
+    - prisonguard
+    
+- synonym: Janitor
+  examples: |
+    - janitor
+    - cleaner
+
+- synonym: Infirmary
+  examples: |
+    - infirmary
+    - infermary
+    - infirmery
+    - Infermary
+
+- synonym: Cayenne Pepper
+  examples: |
+    - Pepper
+    - pepper
+    - cayenne
+    - paprica
+    - Caynne
+
+- synonym: Sunflower
+  examples: |
+    - sunflower
+    - Sun
+    - Flower
+    - flower
+
+- synonym: dirty clothes basket
+  examples: |
+    - clothes basket
+    - cloth basket
+    - basket
+
+- synonym: Broccoli
+  examples: |
+    - broccoli
+    - Brocoli
+    - Brokoli
+    - brocoli
+
+    
