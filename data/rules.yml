@@ -1,6 +1,39 @@
 version: "3.1"
 
 rules:
+
+- rule: player start
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: talk A
+  steps:
+  - intent: talk_with_A
+  - action: utter_A_riddles
+- rule: guess A
+  steps:
+  - intent: guess_mates
+  - action: action_check_guess
+- rule: talk B
+  steps:
+  - intent: talk_with_B
+  - action: utter_B_riddles
+- rule: guess B
+  steps:
+  - intent: guess_mates
+  - action: action_check_guess
+- rule: talk C
+  steps:
+  - intent: talk_with_C
+  - action: utter_C_riddles
+- rule: guess C
+  steps:
+  - intent: guess_mates
+  - action: action_check_guess
+- rule: select cellmates
+  steps:
+    - intent: ask_join
+    - action: action_check_asked_mates
 - rule: check map show locations
   steps:
     - intent: check_location

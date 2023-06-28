@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3-1"
 
 nlu:
 - intent: greet
@@ -31,7 +31,6 @@ nlu:
     - see you later
 
 
-
 - intent: talk_with_A
   examples: |
     - I want to talk with mate [A](person) 
@@ -39,15 +38,15 @@ nlu:
     - [A](person)
     - Can I have a conversation with [A](person)?
     - Is it possible to speak with [A](person)?
-    - I'd like to chat with [A](person).
+    - I'd like to chat with [A](person)-
     - May I engage in a discussion with [A](person)?
     - Could you connect me with [A](person)?
-    - I'm interested in having a dialogue with [A](person).
+    - I'm interested in having a dialogue with [A](person)-
     - Is [A](person) available for a conversation?
-    - I need to communicate with [A](person).
+    - I need to communicate with [A](person)-
     - Can I get in touch with [A](person)?
-    - I would appreciate the opportunity to talk with [A](person).
-    
+    - I would appreciate the opportunity to talk with [A](person)-
+
 - intent: talk_with_B
   examples: |
     - I want to talk with mate [B](person) 
@@ -57,14 +56,14 @@ nlu:
     - [B](person)
     - Can I have a conversation with [B](person)?
     - Is it possible to speak with [B](person)?
-    - I'd like to chat with [B](person).
+    - I'd like to chat with [B](person)-
     - May I engage in a discussion with [B](person)?
     - Could you connect me with [B](person)?
-    - I'm interested in having a dialogue with [B](person).
+    - I'm interested in having a dialogue with [B](person)-
     - Is [B](person) available for a conversation?
-    - I need to communicate with [B](person).
+    - I need to communicate with [B](person)-
     - Can I get in touch with [B](person)?
-    - I would appreciate the opportunity to talk with [B](person).
+    - I would appreciate the opportunity to talk with [B](person)-
 - intent: talk_with_C
   examples: |
     - I want to talk with mate [C](person) 
@@ -74,59 +73,69 @@ nlu:
     - [C](person)
     - Can I have a conversation with [C](person)?
     - Is it possible to speak with [C](person)?
-    - I'd like to chat with [C](person).
+    - I'd like to chat with [C](person)-
     - May I engage in a discussion with [C](person)?
     - Could you connect me with [C](person)?
-    - I'm interested in having a dialogue with [C](person).
+    - I'm interested in having a dialogue with [C](person)-
     - Is [C](person) available for a conversation?
-    - I need to communicate with [C](person).
+    - I need to communicate with [C](person)-
     - Can I get in touch with [C](person)?
-    - I would appreciate the opportunity to talk with [C](person).
+    - I would appreciate the opportunity to talk with [C](person)-
 
 - intent: guess_mates
   examples: |
-    - I think [A](person) is a [Prison Guard](profession).
-    - I think [B](person) is a [Janitor](profession).
-    - I think [C](person) is a [Pilot](profession).   
-    - I think you are a [Pilot](profession).
-    - You must be a [Pilot](profession).
+    - I think [A](person) is a [Prison Guard](profession)-
+    - I think [B](person) is a [Janitor](profession)-
+    - I think [C](person) is a [Pilot](profession)-   
+    - I think you are a [Pilot](profession)-
+    - You must be a [Pilot](profession)-
     - Is [A](person) actually a [Prison Guard](profession)?
     - [B](person) seems to be a [Janitor](profession), right?
     - [C](person) looks like a [Pilot](profession), doesn't he/she?
     - Are you sure [A](person) is a [Prison Guard](profession)?
-    - It appears that [B](person) works as a [Janitor](profession).
-    - [A](person) is probably a [Prison Guard](profession).
-    - I'm guessing [B](person) works as a [Janitor](profession).
-    - [C](person) seems like a [Pilot](profession) to me.
-    - I believe [A](person) is employed as a [Prison Guard](profession).
-    - [B](person) gives the impression of being a [Janitor](profession).
-    - It looks like [C](person) is a [Pilot](profession) based on their appearance.
-    - [A](person) matches the description of a [Prison Guard](profession).
-    - I have a hunch that [B](person) is a [Janitor](profession).
-    - From what I can gather, [C](person) works as a [Pilot](profession).
+    - It appears that [B](person) works as a [Janitor](profession)-
+    - [A](person) is probably a [Prison Guard](profession)-
+    - I'm guessing [B](person) works as a [Janitor](profession)-
+    - [C](person) seems like a [Pilot](profession) to me-
+    - I believe [A](person) is employed as a [Prison Guard](profession)-
+    - [B](person) gives the impression of being a [Janitor](profession)-
+    - It looks like [C](person) is a [Pilot](profession) based on their appearance-
+    - [A](person) matches the description of a [Prison Guard](profession)-
+    - I have a hunch that [B](person) is a [Janitor](profession)-
+    - From what I can gather, [C](person) works as a [Pilot](profession)-
 
 - intent: ask_join
   examples: |
-    - I would like to add [A](person), [B](person), and [C](person) as recruits.
-    - I choose [A](person) and [B](person) as recruits.
-    - I only like to recruit [A](person).
-    - I don't want to recruit anyone.
-    - [A](person), [B](person), and [C](person) as recruits.
-    - [A](person), [B](person), but not [C](person) as recruits.
+    - add  [A](person), [B](person), and [C](person)
+    - recruit everyone
+    - I want everyone
+    - everyone
+    - add everyone
+    - all
+    - all of them
+    - [A](person), [B](person), [C](person)
+    - keep  [A](person), [B](person), and [C](person)
+    - consider  [A](person), [B](person), and [C](person)
+    - I would like to add [A](person), [B](person), and [C](person) as recruits-
+    - I choose [A](person) and [B](person) as recruits-
+    - I only like to recruit [A](person)-
+    - I don't want to recruit anyone-
+    - [A](person), [B](person), and [C](person) as recruits-
+    - [A](person), [B](person), but not [C](person) as recruits-
     - Can I recruit [A](person) and [B](person)?
     - How about recruiting [A](person) to the team?
-    - I prefer recruiting [A](person) and [B](person).
+    - I prefer recruiting [A](person) and [B](person)-
     - Is it possible to recruit [A](person) and [B](person) for the job?
-    - [A](person) and [C](person) should be added to the group.
-    - I want to recruit [B](person) and [C](person) as new members.
-    - Only [A](person) should join as a recruit.
-    - I'm not interested in recruiting [A](person), [B](person), or [C](person).
+    - [A](person) and [C](person) should be added to the group-
+    - I want to recruit [B](person) and [C](person) as new members-
+    - Only [A](person) should join as a recruit-
+    - I'm not interested in recruiting [A](person), [B](person), or [C](person)-
     - Can we recruit [A](person), [B](person), and [C](person) all together?
     - How about adding [B](person) to the team, but not [C](person)?
-    - [A](person) and [B](person) are my top choices for recruits.
+    - [A](person) and [B](person) are my top choices for recruits-
     - Is it okay if we don't recruit [A](person) or [C](person)?
-    - Let's recruit [A](person) and [C](person) as our first priority.
-    - I'm considering [B](person) as a potential recruit, but not [C](person).
+    - Let's recruit [A](person) and [C](person) as our first priority-
+    - I'm considering [B](person) as a potential recruit, but not [C](person)-
 
 - intent: check_location
   examples: |
@@ -158,6 +167,7 @@ nlu:
     - it is ok to punch me
     - I guess there is no other way
     - oK
+    - ok
 
 - intent: deny_get_punched
   examples: |
@@ -172,30 +182,31 @@ nlu:
 
 - intent: distract_nurse
   examples: |
+    - I want food
     - I am super hungry, can you pick some food for me?
     - I am dirty now, can I get a new Pajamas
     - I lost my important pictures in my cell room can you help me to take it?
     - I am super thirsty, can you pick some thinks for me?
-    - I am super hungry. Can you pick some food for me?
-    - I am dirty now. Can I get new pajamas?
-    - I lost my important pictures in my cell room. Can you help me retrieve them?
-    - I am super thirsty. Can you fetch some drinks for me?
-    - Can you bring me something to eat? I haven't eaten for a while.
-    - Could you find me a fresh set of clothes? I need new pajamas.
-    - I accidentally dropped my phone in my cell. Can you retrieve it for me?
-    - I'm feeling dehydrated. Can you bring me some water or a drink?
-    - Is there any chance you can bring me a meal? I'm famished.
-    - I spilled something on my clothes. Can I have a change of pajamas?
-    - I can't find my important pictures. Can you help me search for them?
-    - My throat is dry. Can you get me some fluids or a beverage?
-    - Can you please get me a snack? I'm feeling extremely hungry.
-    - I need clean clothes. Can you provide me with fresh pajamas?
-    - I misplaced my personal photos. Can you assist me in locating them?
-    - I'm really parched. Can you fetch me something to drink?
-    - I'm starving. Can you bring me some food or a meal?
-    - My clothes are soiled. Can you bring me a change of pajamas?
-    - I can't find my important memories. Can you help me recover them?
-    - I'm extremely thirsty. Can you please bring me some refreshments?
+    - I am super hungry- Can you pick some food for me?
+    - I am dirty now- Can I get new pajamas?
+    - I lost my important pictures in my cell room- Can you help me retrieve them?
+    - I am super thirsty- Can you fetch some drinks for me?
+    - Can you bring me something to eat? I haven't eaten for a while-
+    - Could you find me a fresh set of clothes? I need new pajamas-
+    - I accidentally dropped my phone in my cell- Can you retrieve it for me?
+    - I'm feeling dehydrated- Can you bring me some water or a drink?
+    - Is there any chance you can bring me a meal? I'm famished-
+    - I spilled something on my clothes- Can I have a change of pajamas?
+    - I can't find my important pictures- Can you help me search for them?
+    - My throat is dry- Can you get me some fluids or a beverage?
+    - Can you please get me a snack? I'm feeling extremely hungry-
+    - I need clean clothes- Can you provide me with fresh pajamas?
+    - I misplaced my personal photos- Can you assist me in locating them?
+    - I'm really parched- Can you fetch me something to drink?
+    - I'm starving- Can you bring me some food or a meal?
+    - My clothes are soiled- Can you bring me a change of pajamas?
+    - I can't find my important memories- Can you help me recover them?
+    - I'm extremely thirsty- Can you please bring me some refreshments?
 
 - synonym: Mate
   examples: |
@@ -214,21 +225,21 @@ nlu:
     - now I want to check the [Infirmary](locations)
     - have a look in [Infirmary](locations)
     - Can I explore the [Infirmary](locations)?
-    - I would like to examine the [Infirmary](locations).
+    - I would like to examine the [Infirmary](locations)-
     - Is it possible to visit the [Infirmary](locations)?
-    - I want to have a quick look at the [Infirmary](locations).
+    - I want to have a quick look at the [Infirmary](locations)-
     - Could you show me around the [Infirmary](locations)?
-    - I'm interested in inspecting the [Infirmary](locations).
+    - I'm interested in inspecting the [Infirmary](locations)-
     - Is there any problem if I check the [Infirmary](locations)?
-    - I'm curious to see what's in the [Infirmary](locations).
+    - I'm curious to see what's in the [Infirmary](locations)-
     - Can I have access to the [Infirmary](locations) for a moment?
-    - I'd like to take a peek at the [Infirmary](locations).
+    - I'd like to take a peek at the [Infirmary](locations)-
     - Is it allowed to visit the [Infirmary](locations) right now?
-    - I'm thinking of exploring the [Infirmary](locations) area.
+    - I'm thinking of exploring the [Infirmary](locations) area-
     - Can you grant me permission to enter the [Infirmary](locations)?
-    - I want to see what's inside the [Infirmary](locations).
+    - I want to see what's inside the [Infirmary](locations)-
     - Is there any restriction on visiting the [Infirmary](locations)?
-    - I'm considering a visit to the [Infirmary](locations).
+    - I'm considering a visit to the [Infirmary](locations)-
     - Can I have a brief tour of the [Infirmary](locations)?
 
 
@@ -261,21 +272,21 @@ nlu:
     - now I want to check the [laundry room](locations)
     - go [laundry room](locations)
     - Can I go to the [Laundry room](locations)?
-    - I would like to visit the [Laundry room](locations).
+    - I would like to visit the [Laundry room](locations)-
     - Is it possible to access the [Laundry room](locations)?
-    - I want to head to the [Laundry room](locations).
+    - I want to head to the [Laundry room](locations)-
     - Could you guide me to the [Laundry room](locations)?
-    - I'm interested in going to the [Laundry room](locations).
+    - I'm interested in going to the [Laundry room](locations)-
     - Is there any problem if I go to the [Laundry room](locations)?
-    - I'm curious to see the [Laundry room](locations).
+    - I'm curious to see the [Laundry room](locations)-
     - Can I enter the [Laundry room](locations) for a moment?
-    - I'd like to go to the [Laundry room](locations).
+    - I'd like to go to the [Laundry room](locations)-
     - Is it allowed to visit the [Laundry room](locations) right now?
-    - I'm thinking of heading to the [Laundry room](locations).
+    - I'm thinking of heading to the [Laundry room](locations)-
     - Can you grant me access to the [Laundry room](locations)?
-    - I want to go and see the [Laundry room](locations).
+    - I want to go and see the [Laundry room](locations)-
     - Is there any restriction on entering the [Laundry room](locations)?
-    - I'm considering going to the [Laundry room](locations).
+    - I'm considering going to the [Laundry room](locations)-
     - Can I have directions to the [Laundry room](locations)?
 
 - intent: check_Laundry_room
@@ -286,19 +297,19 @@ nlu:
     - check the dirty [clothes basket](items_in_Laundry_room)
     - dirty [clothes basket](items_in_Laundry_room)
     - Can I inspect the [washing machines](items_in_Laundry_room)?
-    - I would like to examine the [lockers](items_in_Laundry_room).
+    - I would like to examine the [lockers](items_in_Laundry_room)-
     - Is it possible to check the dirty [clothes basket](items_in_Laundry_room)?
-    - I want to have a quick look at the [washing machines](items_in_Laundry_room).
+    - I want to have a quick look at the [washing machines](items_in_Laundry_room)-
     - Could you show me the [lockers](items_in_Laundry_room)?
-    - I'm interested in inspecting the [dirty clothes basket](items_in_Laundry_room).
+    - I'm interested in inspecting the [dirty clothes basket](items_in_Laundry_room)-
     - Is there any problem if I check the [washing machines](items_in_Laundry_room)?
-    - I'm curious to see what's in the [lockers](items_in_Laundry_room).
+    - I'm curious to see what's in the [lockers](items_in_Laundry_room)-
     - Can I have access to the dirty [clothes basket](items_in_Laundry_room)?
-    - I'd like to take a peek at the [washing machines](items_in_Laundry_room).
+    - I'd like to take a peek at the [washing machines](items_in_Laundry_room)-
     - Is it allowed to examine the [lockers](items_in_Laundry_room) right now?
-    - I'm thinking of exploring the contents of the dirty [clothes basket](items_in_Laundry_room).
+    - I'm thinking of exploring the contents of the dirty [clothes basket](items_in_Laundry_room)-
     - Can you grant me permission to check the [washing machines](items_in_Laundry_room)?
-    - I want to see what's inside the [lockers](items_in_Laundry_room).
+    - I want to see what's inside the [lockers](items_in_Laundry_room)-
     - Is there any restriction on checking the dirty [clothes basket](items_in_Laundry_room)?
 
 - intent: openlockers
@@ -309,27 +320,27 @@ nlu:
     - [32709](numbercode)
 - intent: go_Kitchen
   examples: |
-    - I want to go to the [Kitchen](locations).
-    - Go to the [Kitchen](locations).
-    - Move to the [Kitchen](locations).
+    - I want to go to the [Kitchen](locations)-
+    - Go to the [Kitchen](locations)-
+    - Move to the [Kitchen](locations)-
     - Can I go to the [Kitchen](locations)?
-    - I would like to visit the [Kitchen](locations).
+    - I would like to visit the [Kitchen](locations)-
     - Is it possible to access the [Kitchen](locations)?
-    - I want to head to the [Kitchen](locations).
+    - I want to head to the [Kitchen](locations)-
     - Could you guide me to the [Kitchen](locations)?
-    - I'm interested in going to the [Kitchen](locations).
+    - I'm interested in going to the [Kitchen](locations)-
     - Is there any problem if I go to the [Kitchen](locations)?
-    - I'm curious to see what's in the [Kitchen](locations).
+    - I'm curious to see what's in the [Kitchen](locations)-
     - Can I enter the [Kitchen](locations) for a moment?
-    - I'd like to go to the [Kitchen](locations).
+    - I'd like to go to the [Kitchen](locations)-
     - Is it allowed to visit the [Kitchen](locations) right now?
-    - I'm thinking of heading to the [Kitchen](locations).
+    - I'm thinking of heading to the [Kitchen](locations)-
     - Can you grant me access to the [Kitchen](locations)?
-    - I want to go and see the [Kitchen](locations).
+    - I want to go and see the [Kitchen](locations)-
     - Is there any restriction on entering the [Kitchen](locations)?
-    - I'm considering going to the [Kitchen](locations).
+    - I'm considering going to the [Kitchen](locations)-
     - Can I have directions to the [Kitchen](locations)?
-    
+
 - intent: guess_kitchen_code
   examples: |
     - I think it should be [Brocolli](vegetables)
@@ -339,21 +350,21 @@ nlu:
     - [Broccolli](vegetables)
     - [Broccoli](vegetables)
     - [Brocolli](vegetables)
-    - Maybe the code is [Brocolli](vegetables).
+    - Maybe the code is [Brocolli](vegetables)-
     - Could it be [Broccoli](vegetables)?
     - How about [Broccoli](vegetables)?
-    - I'm guessing it might be [Broccoli](vegetables).
+    - I'm guessing it might be [Broccoli](vegetables)-
     - Is it possible that it's [Broccoli](vegetables)?
     - What if the code is [Broccoli](vegetables)?
-    - [Broccoli](vegetables) seems like a possible option.
-    - I have a feeling it could be [Broccoli](vegetables).
-    - Let's try [Broccoli](vegetables) as the code.
-    - [Broccoli](vegetables) is my best guess.
-    - I'm leaning towards [Broccoli](vegetables) for the code.
-    - [Broccoli](vegetables) is a potential choice for the code.
-    - Perhaps it's [Broccoli](vegetables) that we're looking for.
-    - The code might be [Broccoli](vegetables) after all.
-    - I believe [Broccoli](vegetables) could be the code.
+    - [Broccoli](vegetables) seems like a possible option-
+    - I have a feeling it could be [Broccoli](vegetables)-
+    - Let's try [Broccoli](vegetables) as the code-
+    - [Broccoli](vegetables) is my best guess-
+    - I'm leaning towards [Broccoli](vegetables) for the code-
+    - [Broccoli](vegetables) is a potential choice for the code-
+    - Perhaps it's [Broccoli](vegetables) that we're looking for-
+    - The code might be [Broccoli](vegetables) after all-
+    - I believe [Broccoli](vegetables) could be the code-
 
 - intent: deal_with_food
   examples: |
@@ -365,21 +376,21 @@ nlu:
     - go to the Warden's [office](locations)
     - move to the [office](locations)
     - Can I go to the Warden's [office](locations)?
-    - I would like to visit the Warden's [office](locations).
+    - I would like to visit the Warden's [office](locations)-
     - Is it possible to access the Warden's [office](locations)?
-    - I want to head to the Warden's [office](locations).
+    - I want to head to the Warden's [office](locations)-
     - Could you guide me to the Warden's [office](locations)?
-    - I'm interested in going to the Warden's [office](locations).
+    - I'm interested in going to the Warden's [office](locations)-
     - Is there any problem if I go to the Warden's [office](locations)?
-    - I'm curious to see what's in the Warden's [office](locations).
+    - I'm curious to see what's in the Warden's [office](locations)-
     - Can I enter the Warden's [office](locations) for a moment?
-    - I'd like to go to the Warden's [office](locations).
+    - I'd like to go to the Warden's [office](locations)-
     - Is it allowed to visit the Warden's [office](locations) right now?
-    - I'm thinking of heading to the Warden's [office](locations).
+    - I'm thinking of heading to the Warden's [office](locations)-
     - Can you grant me access to the Warden's [office](locations)?
-    - I want to go and see the Warden's [office](locations).
+    - I want to go and see the Warden's [office](locations)-
     - Is there any restriction on entering the Warden's [office](locations)?
-    - I'm considering going to the Warden's [office](locations).
+    - I'm considering going to the Warden's [office](locations)-
     - Can I have directions to the Warden's [office](locations)?
 
 - intent: check_office_items
@@ -390,19 +401,19 @@ nlu:
     - check the dirty [chair](items_in_office)
     - [telephone](items_in_office)
     - Can I inspect the transparent [cabinet](items_in_office)?
-    - I would like to examine the [telephone](items_in_office).
+    - I would like to examine the [telephone](items_in_office)-
     - Is it possible to check the dirty [chair](items_in_office)?
-    - I want to have a quick look at the transparent [cabinet](items_in_office).
+    - I want to have a quick look at the transparent [cabinet](items_in_office)-
     - Could you show me the [telephone](items_in_office)?
-    - I'm interested in inspecting the desk [lamp](items_in_office).
+    - I'm interested in inspecting the desk [lamp](items_in_office)-
     - Is there any problem if I check the dirty [chair](items_in_office)?
-    - I'm curious to see what's in the [telephone](items_in_office).
+    - I'm curious to see what's in the [telephone](items_in_office)-
     - Can I have access to the transparent [cabinet](items_in_office)?
-    - I'd like to take a peek at the [telephone](items_in_office).
+    - I'd like to take a peek at the [telephone](items_in_office)-
     - Is it allowed to examine the desk [lamp](items_in_office) right now?
-    - I'm thinking of exploring the contents of the dirty [chair](items_in_office).
+    - I'm thinking of exploring the contents of the dirty [chair](items_in_office)-
     - Can you grant me permission to check the transparent [cabinet](items_in_office)?
-    - I want to see what's inside the [telephone](items_in_office).
+    - I want to see what's inside the [telephone](items_in_office)-
     - Is there any restriction on checking the dirty [chair](items_in_office)?
 
 - intent: phone_call
@@ -445,21 +456,21 @@ nlu:
     - go to [Heli Pad](locations)
     - move to [Heli Pad](locations)
     - Can I go to the [Heli Pad](locations)?
-    - I would like to visit the [Heli Pad](locations).
+    - I would like to visit the [Heli Pad](locations)-
     - Is it possible to access the [Heli Pad](locations)?
-    - I want to head to the [Heli Pad](locations).
+    - I want to head to the [Heli Pad](locations)-
     - Could you guide me to the [Heli Pad](locations)?
-    - I'm interested in going to the [Heli Pad](locations).
+    - I'm interested in going to the [Heli Pad](locations)-
     - Is there any problem if I go to the [Heli Pad](locations)?
-    - I'm curious to see what's in the [Heli Pad](locations).
+    - I'm curious to see what's in the [Heli Pad](locations)-
     - Can I enter the [Heli Pad](locations) for a moment?
-    - I'd like to go to the [Heli Pad](locations).
+    - I'd like to go to the [Heli Pad](locations)-
     - Is it allowed to visit the [Heli Pad](locations) right now?
-    - I'm thinking of heading to the [Heli Pad](locations).
+    - I'm thinking of heading to the [Heli Pad](locations)-
     - Can you grant me access to the [Heli Pad](locations)?
-    - I want to go and see the [Heli Pad](locations).
+    - I want to go and see the [Heli Pad](locations)-
     - Is there any restriction on entering the [Heli Pad](locations)?
-    - I'm considering going to the [Heli Pad](locations).
+    - I'm considering going to the [Heli Pad](locations)-
     - Can I have directions to the [Heli Pad](locations)?
 
 - intent: deal_with_M
@@ -475,11 +486,124 @@ nlu:
     - Guard
     - guard
     - prisonguard
+    - Warden
+    - Correctional officer
+    - Jailor
+    - Prison officer
+    - Detention officer
+    - Custodial officer
+    - Correctional staff
+    - Correctional agent
+    - Correctional employee
+    - Correctional deputy
+    - Corrections officer
+    - Prison warden
+    - Prison keeper
+    - Jail superintendent
+    - Detention center guard
+    - Penitentiary warden
+    - Prison watchman
+    - Jail sentinel
+    - warden
+    - correctional officer
+    - jailor
+    - jail guard
+    - prison officer
+    - detention officer
+    - custodial officer
+    - penitentiary guard
+    - correctional staff
+    - correctional agent
+    - correctional employee
+    - correctional deputy
+    - corrections officer
+    - prison warden
+    - prison keeper
+    - jail superintendent
+    - detention center guard
+    - penitentiary warden
+    - prison watchman
+    - jail sentinel
     
+
 - synonym: Janitor
   examples: |
-    - janitor
+    - Custodian
+    - Cleaner
+    - Caretaker
+    - Housekeeper
+    - Attendant
+    - Steward
+    - Sweeper
+    - Maintenance worker
+    - House cleaner
+    - Sanitation engineer
+    - Building superintendent
+    - Facility manager
+    - Groundskeeper
+    - Maid
+    - Porter
+    - Housemaid
+    - Handyman
+    - Groundsman
+    - House steward
+    - Service technician
+    - custodian
     - cleaner
+    - caretaker
+    - housekeeper
+    - janitor
+    - jnatior
+    - attendant
+    - steward
+    - sweeper
+    - maintenance worker
+    - sanitation engineer
+    - building superintendent
+    - facility manager
+    - groundskeeper
+    - maid
+    - porter
+    - housemaid
+    - handyman
+    - groundsman
+    - house steward
+    - service technician
+
+- synonym: Pilot
+  examples: |
+    - Aviator
+    - pilot
+    - Flyer
+    - Captain
+    - Airman
+    - Navigator
+    - Aerialist
+    - Aircrew
+    - Helmsman
+    - Wingman
+    - Flight officer
+    - Sky jockey
+    - Ace
+    - Cockpit operator
+    - Jet jockey
+    - Airmaster
+    - aviator
+    - flyer
+    - captain
+    - airman
+    - navigator
+    - aerialist
+    - aircrew
+    - helmsman
+    - wingman
+    - flight officer
+    - sky jockey
+    - ace
+    - cockpit operator
+    - jet jockey
+    - airmaster
+
 
 - synonym: Infirmary
   examples: |
@@ -487,6 +611,29 @@ nlu:
     - infermary
     - infirmery
     - Infermary
+- synonym: Kitchen
+  examples: |
+    - kitchen
+    - kichen
+    - Kichen
+
+- synonym: office
+  examples: |
+    - Office
+    - office
+- synonym: Heli Pad
+  examples: |
+    - helipad
+    - Helipad
+    - helistop
+    - landing pad
+    - helicopter
+
+- synonym: Laundry room
+  examples: |
+    - Laundry
+    - landry room
+    - laundry
 
 - synonym: Cayenne Pepper
   examples: |
@@ -502,13 +649,35 @@ nlu:
     - Sun
     - Flower
     - flower
-
-- synonym: dirty clothes basket
+- synonym: Bioluminescent Algae
   examples: |
-    - clothes basket
-    - cloth basket
-    - basket
+    - bioluminescent algae
+    - Bioluminescent
+    - Algae
+- synonym: Lavender
+  examples: |
+    - lavender
 
+
+- synonym: clothes basket
+  examples: |
+    - dirty clothes basket
+    - basket
+    - clothes
+    - Clothes
+    - Basket
+
+- synonym: lockers
+  examples: |
+    - Locker
+    - locker
+    - Lockers
+- synonym: washing machines
+  examples: |
+    - washingmachines
+    - washing Machine
+    - wash machine
+    - Washing Machine
 - synonym: Broccoli
   examples: |
     - broccoli
@@ -516,4 +685,81 @@ nlu:
     - Brokoli
     - brocoli
 
+- synonym: eat
+  examples: |
+    - Eat
+- synonym: drug
+  examples: |
+    - Drug
     
+- synonym: cabinet
+  examples: |
+    - Cabine
+    - Cabinet
+    - cabinets
+    - Cabinets
+- synonym: lamp
+  examples: |
+    - Lamp
+    - lamps
+    - Lamps
+- synonym: telephone
+  examples: |
+    - Telefone
+    - Telephone
+    - Phone
+    - phone
+- synonym: chair
+  examples: |
+    - Chair
+    - chairs
+
+- synonym: Son
+  examples: |
+    - son
+
+- synonym: Friend
+  examples: |
+    - friend 
+    - Stefan
+    - Stephan
+    - stephan
+    - stefan
+
+- synonym: Array
+  examples: |
+    - array 
+    - arrays
+    - Arrays
+- synonym: List
+  examples: |
+    - list
+    - Lists
+    - List
+- synonym: Variable
+  examples: |
+    - variable
+    - variabel
+    - Variabel
+    - variables
+    - Variables
+- synonym: Queue
+  examples: |
+    - queue
+    - Queues
+    - queues
+- synonym: Abandon
+  examples: |
+    - abandon
+    - reject
+    - Reject
+- synonym: Confront
+  examples: |
+    - confront
+    - Confrontation
+    - Con
+    - con 
+
+- synonym: Agree
+  examples: |
+    - agree
