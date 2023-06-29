@@ -147,9 +147,7 @@ slots:
      - type: custom
 responses:
   utter_greet:
-  - text: "You wake up groggy and dehydrated. This has been your morning for the last few months. Wiping the sleep from your eyes, you find yourself yet again in the prison cell the guards threw you in months ago. Three other men are in the room with you. During all the days you have spent together here, they haven’t given you their real names, so you just refer to them as A,B and C. One is reading, while the other one stares at a crossword puzzle. The third one is sleeping and snoring loudly. 
-You swore yourself to find a way out of this place and have been cooking up an escape plan. You know it won’t be easy and that you won’t make it out on your own, but who can you trust inside these walls? You have considered asking your inmates for help, but haven’t decided if thats a wise decision. It’s time to get going. What should you do next?.
- Talking to your cellmates seems like a good start. They have been here longer than you have and might mention something that could be useful for your escape..."
+  - text: "You wake up in the prison cell with three other men, referred to as A, B, and C. One is reading, another solving a crossword puzzle, and the third is snoring loudly. Determined to escape, you consider seeking help from your cellmates but remain undecided. It's time to take action. What's your next move?"
   utter_A_riddles:
   - text: "A: Hello new inmate. We can be friends if you guess the profession I had before being incarcerated.'I wear a uniform, stern and tough, In this cell block, I've seen enough. Keys and bars are part of my day, Maintaining order, come what may'.
 Who am I?"
@@ -164,9 +162,9 @@ Who am I?"
   utter_goodbye:
   - text: "Bye"
   utter_mateb_punch:
-  - text: 'Cellmates: There is no way you can just walk into the infirmery you are in a prison after all. Well at least not when you look healthy. There is a way to get you there quickly but it will hurt... One of us will punch you really hard to the point that the guards will have no choice but to take you to the infirmery to patch you up. So do you wanna do it ?'
+  - text: 'A: "In order to gain access to the infirmary, we have a risky plan for you. One of us will need to punch you hard, making it look like you need medical attention. The guards will then take you to the infirmary without raising suspicions. Are you willing to go through with it?"'
   utter_able_check_inf:
-  - text: "You are now alone in the infirmary, you can look around and do what you want. But you gotta do it fast cause the nurse might come back at any time!"
+  - text: "You find yourself alone in the infirmary with limited time before the nurse returns. Take a quick look around and decide what actions to take"
 actions:
   - action_check_guess
   - action_check_asked_mates
