@@ -126,11 +126,8 @@ class AbleCheck(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         print(tracker.get_slot('nurse_away'))
         if tracker.get_slot('location_Infirmary') and tracker.get_slot('nurse_away'):
-            dispatcher.utter_message(text="You are now alone and can proceed with your plan. But you gotta do it fast cause the nurse might come back at any time! In this room there is a cabinet with 5 different ingredients: Lavender, Sunflower, Cayenne Pepper, Aloe Vera, Bioluminescent Algae. On the counter, a recipe with the instruction for making a potent sedative is written. The nurse must have forgotten to put it away! There are four components of anesthetics, and you need to guess them correctly through riddles. If you want to get the sedative, type the right ingredients in order one after another")
-            dispatcher.utter_message(text="1. With a pleasant aroma, my name starts with L, Guess me now, a flower that rings a sweet bell.")
-            dispatcher.utter_message(text="2. I am tall and bright, a flower so cheery,With petals golden, and seeds you can eat, oh so seedy.")
-            dispatcher.utter_message(text="3. Spicy and red, I add the heat, Guess my name, this pepper so neat.")
-            dispatcher.utter_message(text="4. In the depths of the ocean, a magical sight, multiple words describe my light.")
+            dispatcher.utter_message(text="Time is crucial now. Alone in the room, you find a cabinet with five ingredients: Lavender, Sunflower, Cayenne Pepper, and Bioluminescent Algae. A forgotten recipe for a potent sedative lies on the counter. Guess the four anesthetic components in the correct order by solving riddles. ")
+            dispatcher.utter_message(text="RECIPE: <ol><li>I am fragrant and purple, bringing relaxation and calm. What am I?</li><li>I am tall and bright, a flower so cheery, with petals golden, and seeds you can eat, oh so seedy.</li><li>Spicy and red, I add the heat. Guess my name, this pepper so neat.</li><li>In the depths of the ocean, a magical sight. Multiple words describe my light.</li></ol>")
             #return [SlotSet("nurse_away", False)]
         else:
             dispatcher.utter_message(text="The trainee nurse is still in the infirmary. You should be alone to look around if you don't want to get caught!")

@@ -8,7 +8,7 @@
     "id": "prison-break",
     "background-image": "EscapeBoticsBackground.jpg",
     "api_url": "http://localhost:5005",
-    "welcome-message": "Welcome to the EscapeRobotics escape room! You will slip into the role of a renowned lawyer, who uncovered a massive web of corruption within a big corporation. After trying to pursue legal action through the court system, you were framed and dishonoured, before being thrown into a prison. Naturally, you have decided to escape the facility and reclaim your integrity. During your playthrough you will have to talk to NPCs (e.g. talk to Sam), navigate your way through the facility (e.g. go to the bathroom), interact with your environment (e.g. search for or pick up) and solve challenging riddles. Be careful - each riddle only allows for a certain number of errors and failing a riddle will have detrimental consequences. So take your time when playing the game and only start the questionnaire once you have finished it. You can start the game by typing “hi”. This is all you need to know for now…Good luck and have fun!",
+    "welcome-message": "Welcome to the EscapeRobotics escape room! You will slip into the role of a renowned lawyer, who uncovered a massive web of corruption within a big corporation. After trying to pursue legal action through the court system, you were framed and dishonoured, before being thrown into a prison. Naturally, you have decided to escape the facility and reclaim your integrity. You can start the game by greeting the bot. This is all you need to know for now… Good luck and have fun! :)",
     "chatbot-avatar": "EscapeBoticsChatbot.jpg",
     "user-avatar": "EscapeBoticsAvatar.jpg"
     }
