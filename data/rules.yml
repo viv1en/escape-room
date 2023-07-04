@@ -105,3 +105,8 @@ rules:
   steps:
     - intent: deal_with_M
     - action: action_ending
+
+- rule: restart the game
+  steps:
+    - intent: restart
+    - action: action_restart

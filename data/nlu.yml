@@ -33,109 +33,112 @@ nlu:
 
 - intent: talk_with_A
   examples: |
-    - I want to talk with mate [A](person) 
-    - talk to [A](person)
-    - [A](person)
-    - Can I have a conversation with [A](person)?
-    - Is it possible to speak with [A](person)?
-    - I'd like to chat with [A](person)-
-    - May I engage in a discussion with [A](person)?
-    - Could you connect me with [A](person)?
-    - I'm interested in having a dialogue with [A](person)-
-    - Is [A](person) available for a conversation?
-    - I need to communicate with [A](person)-
-    - Can I get in touch with [A](person)?
-    - I would appreciate the opportunity to talk with [A](person)-
+    - I want to talk with mate [Maverick](person) 
+    - talk to [Maverick](person)
+    - [Maverick](person)
+    - Can I have a conversation with [maverick](person)?
+    - Is it possible to speak with [maverick](person)?
+    - I'd like to chat with [Maverick](person)-
+    - May I engage in a discussion with [maverick](person)?
+    - Could you connect me with [Maverick](person)?
+    - I'm interested in having a dialogue with [Maverick](person)-
+    - Is [Maverick](person) available for a conversation?
+    - I need to communicate with [Maverick](person)-
+    - Can I get in touch with [maverick](person)?
+    - I would appreciate the opportunity to talk with [Maverick](person)-
 
 - intent: talk_with_B
   examples: |
-    - I want to talk with mate [B](person) 
-    - I want to chat with mate [B](person) 
-    - talk to [B](person)
-    - person [B](person)
-    - [B](person)
-    - Can I have a conversation with [B](person)?
-    - Is it possible to speak with [B](person)?
-    - I'd like to chat with [B](person)-
-    - May I engage in a discussion with [B](person)?
-    - Could you connect me with [B](person)?
-    - I'm interested in having a dialogue with [B](person)-
-    - Is [B](person) available for a conversation?
-    - I need to communicate with [B](person)-
-    - Can I get in touch with [B](person)?
-    - I would appreciate the opportunity to talk with [B](person)-
+    - I want to talk with mate [Mr.Clean](person) 
+    - I want to chat with mate [mr.clean](person) 
+    - talk to [mr.clean](person)
+    - person [Mr. CLean](person)
+    - [mr.Clean](person)
+    - Can I have a conversation with [Mr.Clean](person)?
+    - Is it possible to speak with [Mr.Clean](person)?
+    - I'd like to chat with [Mr.Clean](person)-
+    - May I engage in a discussion with [Mr.Clean](person)?
+    - Could you connect me with [Mr.Clean](person)?
+    - I'm interested in having a dialogue with [Mr.Clean](person)-
+    - Is [Mr.Clean](person) available for a conversation?
+    - I need to communicate with [Mr.Clean](person)-
+    - Can I get in touch with [Mr.Clean](person)?
+    - I would appreciate the opportunity to talk with [Mr.Clean](person)-
 - intent: talk_with_C
   examples: |
-    - I want to talk with mate [C](person) 
-    - I want to chat with mate [C](person) 
-    - talk to [C](person)
-    - person [C](person) 
-    - [C](person)
-    - Can I have a conversation with [C](person)?
-    - Is it possible to speak with [C](person)?
-    - I'd like to chat with [C](person)-
-    - May I engage in a discussion with [C](person)?
-    - Could you connect me with [C](person)?
-    - I'm interested in having a dialogue with [C](person)-
-    - Is [C](person) available for a conversation?
-    - I need to communicate with [C](person)-
-    - Can I get in touch with [C](person)?
-    - I would appreciate the opportunity to talk with [C](person)-
+    - I want to talk with mate [Jailer Jake](person) 
+    - I want to chat with mate [Jailer](person) 
+    - talk to [Jake](person)
+    - person [jailer](person) 
+    - [jake](person)
+    - Can I have a conversation with [jailer jake](person)?
+    - Is it possible to speak with [Jailer Jake](person)?
+    - I'd like to chat with [Jailer Jake](person)-
+    - May I engage in a discussion with [Jailer Jake](person)?
+    - Could you connect me with [Jailer Jake](person)?
+    - I'm interested in having a dialogue with [Jailer Jake](person)-
+    - Is [Jailer Jake](person) available for a conversation?
+    - I need to communicate with [Jailer Jake](person)-
+    - Can I get in touch with [Jailer Jake](person)?
+    - I would appreciate the opportunity to talk with [Jailer Jake](person)-
 
 - intent: guess_mates
   examples: |
-    - I think [A](person) is a [Prison Guard](profession)-
-    - I think [B](person) is a [Janitor](profession)-
-    - I think [C](person) is a [Pilot](profession)-   
-    - I think you are a [Pilot](profession)-
-    - You must be a [Pilot](profession)-
-    - Is [A](person) actually a [Prison Guard](profession)?
-    - [B](person) seems to be a [Janitor](profession), right?
-    - [C](person) looks like a [Pilot](profession), doesn't he/she?
-    - Are you sure [A](person) is a [Prison Guard](profession)?
-    - It appears that [B](person) works as a [Janitor](profession)-
-    - [A](person) is probably a [Prison Guard](profession)-
-    - I'm guessing [B](person) works as a [Janitor](profession)-
-    - [C](person) seems like a [Pilot](profession) to me-
-    - I believe [A](person) is employed as a [Prison Guard](profession)-
-    - [B](person) gives the impression of being a [Janitor](profession)-
-    - It looks like [C](person) is a [Pilot](profession) based on their appearance-
-    - [A](person) matches the description of a [Prison Guard](profession)-
-    - I have a hunch that [B](person) is a [Janitor](profession)-
-    - From what I can gather, [C](person) works as a [Pilot](profession)-
+    - I think [Maverick](person) is a [Prison Guard](profession)
+    - [maverick](person) is a [Prison warden](profession)
+    - I think [Mr.Clean](person) is a [Janitor](profession)
+    - [Mr.Clean](person) is a [Cleaner](profession)
+    - [Mr.Clean](person) is a [cleaner](profession)
+    - I think [Jailer Jake](person) is a [airman](profession)
+    - I think you are a [Pilot](profession)
+    - You must be a [Pilot](profession)
+    - Is [Maverick](person) actually a [Prison Guard](profession)?
+    - [Mr.Clean](person) seems to be a [Janitor](profession), right?
+    - [Jailer Jake](person) looks like a [Pilot](profession), doesn't he/she?
+    - Are you sure [Maverick](person) is a [Prison Guard](profession)?
+    - It appears that [Mr.Clean](person) works as a [Janitor](profession)
+    - [Maverick](person) is probably a [Prison Guard](profession)
+    - I'm guessing [Mr.Clean](person) works as a [janitor](profession)
+    - [Jailer Jake](person) seems like a [Airman](profession) to me
+    - I believe [Maverick](person) is employed as a [Prison Guard](profession)
+    - [Mr.Clean](person) gives the impression of being a [Janitor](profession)
+    - It looks like [Jailer Jake](person) is a [Captain](profession) based on their appearance
+    - [Maverick](person) matches the description of a [Prison Guard](profession)
+    - I have a hunch that [Mr.Clean](person) is a [Janitor](profession)
+    - From what I can gather, [Jailer Jake](person) works as a [Flyer](profession)
 
 - intent: ask_join
   examples: |
-    - add  [A](person), [B](person), and [C](person)
+    - add  [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
     - recruit everyone
     - I want everyone
     - everyone
     - add everyone
     - all
     - all of them
-    - [A](person), [B](person), [C](person)
-    - keep  [A](person), [B](person), and [C](person)
-    - consider  [A](person), [B](person), and [C](person)
-    - I would like to add [A](person), [B](person), and [C](person) as recruits-
-    - I choose [A](person) and [B](person) as recruits-
-    - I only like to recruit [A](person)-
+    - [maverick](person), [mr.clean](person), [jailer jake](person)
+    - keep  [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
+    - consider  [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
+    - I would like to add [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person) as recruits-
+    - I choose [Maverick](person) and [Mr.Clean](person) as recruits-
+    - I only like to recruit [Maverick](person)-
     - I don't want to recruit anyone-
-    - [A](person), [B](person), and [C](person) as recruits-
-    - [A](person), [B](person), but not [C](person) as recruits-
-    - Can I recruit [A](person) and [B](person)?
-    - How about recruiting [A](person) to the team?
-    - I prefer recruiting [A](person) and [B](person)-
-    - Is it possible to recruit [A](person) and [B](person) for the job?
-    - [A](person) and [C](person) should be added to the group-
-    - I want to recruit [B](person) and [C](person) as new members-
-    - Only [A](person) should join as a recruit-
-    - I'm not interested in recruiting [A](person), [B](person), or [C](person)-
-    - Can we recruit [A](person), [B](person), and [C](person) all together?
-    - How about adding [B](person) to the team, but not [C](person)?
-    - [A](person) and [B](person) are my top choices for recruits-
-    - Is it okay if we don't recruit [A](person) or [C](person)?
-    - Let's recruit [A](person) and [C](person) as our first priority-
-    - I'm considering [B](person) as a potential recruit, but not [C](person)-
+    - [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person) as recruits-
+    - [Maverick](person), [Mr.Clean](person), but not [Jailer Jake](person) as recruits-
+    - Can I recruit [Maverick](person) and [Mr.Clean](person)?
+    - How about recruiting [Maverick](person) to the team?
+    - I prefer recruiting [Maverick](person) and [Mr.Clean](person)-
+    - Is it possible to recruit [Maverick](person) and [Mr.Clean](person) for the job?
+    - [Maverick](person) and [Jailer Jake](person) should be added to the group-
+    - I want to recruit [Mr.Clean](person) and [Jailer Jake](person) as new members-
+    - Only [Maverick](person) should join as a recruit-
+    - I'm not interested in recruiting [Maverick](person), [Mr.Clean](person), or [Jailer Jake](person)-
+    - Can we recruit [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person) all together?
+    - How about adding [Mr.Clean](person) to the team, but not [Jailer Jake](person)?
+    - [Maverick](person) and [Mr.Clean](person) are my top choices for recruits-
+    - Is it okay if we don't recruit [Maverick](person) or [Jailer Jake](person)?
+    - Let's recruit [Maverick](person) and [Jailer Jake](person) as our first priority-
+    - I'm considering [Mr.Clean](person) as a potential recruit, but not [Jailer JakeC](person)-
 
 - intent: check_location
   examples: |
@@ -481,128 +484,59 @@ nlu:
     - [Confront](deal_M) with him
     - [Agree](deal_M)
 
+- intent: restart
+  examples: |
+    - restart
+    - reset
+    - play again
+    
+
+
+
+- synonym: Maverick
+  examples: |
+    - maverick
+    - A
+- synonym: Mr.Clean
+  examples: |
+    - mr.clean
+    - Mr. Clean
+    - mr. clean
+    - Clean
+    - clean
+- synonym: Jailer Jake
+  examples: |
+    - Jake
+    - Jailer
+    - jailer jake
+    - jake
+    - jailer
 - synonym: Prison Guard
   examples: |
     - Guard
     - guard
+    - prison guard 
     - prisonguard
-    - Warden
-    - Correctional officer
-    - Jailor
-    - Prison officer
-    - Detention officer
-    - Custodial officer
-    - Correctional staff
-    - Correctional agent
-    - Correctional employee
-    - Correctional deputy
-    - Corrections officer
     - Prison warden
-    - Prison keeper
-    - Jail superintendent
-    - Detention center guard
-    - Penitentiary warden
-    - Prison watchman
-    - Jail sentinel
-    - warden
-    - correctional officer
-    - jailor
-    - jail guard
-    - prison officer
-    - detention officer
-    - custodial officer
-    - penitentiary guard
-    - correctional staff
-    - correctional agent
-    - correctional employee
-    - correctional deputy
-    - corrections officer
-    - prison warden
-    - prison keeper
-    - jail superintendent
-    - detention center guard
-    - penitentiary warden
-    - prison watchman
-    - jail sentinel
+
+
     
 
 - synonym: Janitor
   examples: |
-    - Custodian
     - Cleaner
-    - Caretaker
-    - Housekeeper
-    - Attendant
-    - Steward
-    - Sweeper
-    - Maintenance worker
-    - House cleaner
-    - Sanitation engineer
-    - Building superintendent
-    - Facility manager
-    - Groundskeeper
-    - Maid
-    - Porter
-    - Housemaid
-    - Handyman
-    - Groundsman
-    - House steward
-    - Service technician
-    - custodian
     - cleaner
-    - caretaker
-    - housekeeper
     - janitor
-    - jnatior
-    - attendant
-    - steward
-    - sweeper
-    - maintenance worker
-    - sanitation engineer
-    - building superintendent
-    - facility manager
-    - groundskeeper
-    - maid
-    - porter
-    - housemaid
-    - handyman
-    - groundsman
-    - house steward
-    - service technician
 
 - synonym: Pilot
   examples: |
-    - Aviator
     - pilot
     - Flyer
     - Captain
     - Airman
-    - Navigator
-    - Aerialist
-    - Aircrew
-    - Helmsman
-    - Wingman
-    - Flight officer
-    - Sky jockey
-    - Ace
-    - Cockpit operator
-    - Jet jockey
-    - Airmaster
-    - aviator
-    - flyer
-    - captain
     - airman
-    - navigator
-    - aerialist
-    - aircrew
-    - helmsman
-    - wingman
-    - flight officer
-    - sky jockey
-    - ace
-    - cockpit operator
-    - jet jockey
-    - airmaster
+    
+
 
 
 - synonym: Infirmary

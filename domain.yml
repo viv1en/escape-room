@@ -27,6 +27,7 @@ intents:
   - answer_son
   - go_Heli_Pad
   - deal_with_M
+  - restart
 
 entities:
   - person
@@ -41,6 +42,7 @@ entities:
   - called_person
   - answer_to_son
   - deal_M
+
 slots:
   location_cell:
     type: bool
@@ -147,17 +149,17 @@ slots:
      - type: custom
 responses:
   utter_greet:
-  - text: "You wake up groggy and dehydrated. This has been your morning for the last few months. Wiping the sleep from your eyes, you find yourself yet again in the prison cell the guards threw you in months ago. Three other men are in the room with you. During all the days you have spent together here, they haven’t given you their real names, so you just refer to them as A,B and C. One is reading, while the other one stares at a crossword puzzle. The third one is sleeping and snoring loudly. 
-You swore yourself to find a way out of this place and have been cooking up an escape plan. You know it won’t be easy and that you won’t make it out on your own, but who can you trust inside these walls? You have considered asking your inmates for help, but haven’t decided if thats a wise decision. It’s time to get going. What should you do next?.
+  - text: "You wake up groggy and dehydrated. This has been your morning for the last few months. Wiping the sleep from your eyes, you find yourself yet again in the prison cell the guards threw you in months ago. Three other men are in the room with you. During all the days you have spent together here, they haven’t given you their real names, so you just refer to them as Maverick, Mr.Clean and Jailer Jake. One is reading, while the other one stares at a crossword puzzle. The third one is sleeping and snoring loudly. 
+You swore yourself to find a way out of this place and have been cooking up an escape plan. You know it won’t be easy and that you won’t make it out on your own, but who can you trust inside these walls? You have considered asking your inmates for help, but haven’t decided if that's a wise decision. It’s time to get going. What should you do next?.
  Talking to your cellmates seems like a good start. They have been here longer than you have and might mention something that could be useful for your escape..."
   utter_A_riddles:
-  - text: "A: Hello new inmate. We can be friends if you guess the profession I had before being incarcerated.'I wear a uniform, stern and tough, In this cell block, I've seen enough. Keys and bars are part of my day, Maintaining order, come what may'.
+  - text: "Maverick: Hello new inmate. We can be friends if you guess the profession I had before being incarcerated.'I wear a uniform, stern and tough, In this cell block, I've seen enough. Keys and bars are part of my day, Maintaining order, come what may'.
 Who am I?"
   utter_B_riddles:
-  - text: "B: Whatsup new fish ? If you want to talk with me you need to guess my profession at first. 'In this place, I clean and sweep, No task too dirty, no mess too deep. From mopping floors to taking out trash, My role is crucial, in every clash.'
+  - text: "Mr.Clean: Whatsup new fish ? If you want to talk with me you need to guess my profession at first. 'In this place, I clean and sweep, No task too dirty, no mess too deep. From mopping floors to taking out trash, My role is crucial, in every clash.'
 Who am I?"
   utter_C_riddles:
-  - text: "C: Hello cellmate wanna guess my profession as well? Here is a riddle that would help you. 'I take to the skies, high and wide, A captain of the clouds, I glide. Navigating planes with skill and grace, Traversing borders, from place to place.'
+  - text: "Jailer Jake: Hello cellmate wanna guess my profession as well? Here is a riddle that would help you. 'I take to the skies, high and wide, A captain of the clouds, I glide. Navigating planes with skill and grace, Traversing borders, from place to place.'
 Who am I?"
   utter_mate_ratted:
   - text: "You made the wrong decision. All inmates heard your escape plan and the ones you didn't recruit ratted you out for a reduced sentence."
@@ -186,6 +188,7 @@ actions:
   - action_check_answer_to_son
   - action_vertification_go_helipad
   - action_ending
+  - action_restartd
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
