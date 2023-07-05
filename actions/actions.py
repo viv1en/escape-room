@@ -156,7 +156,7 @@ class Get_sedative(Action):
                 dispatcher.utter_message(text='Nothing happened, you need 4 ingredients')
             else:
                 if 'Lavender' in entities and 'Sunflower' in entities and 'Cayenne Pepper' in entities and 'Bioluminescent Algae' in entities:
-                    dispatcher.utter_message(text='A new potent chemical is formed , just the smell is making you sleepy. Nice, you acquired the sedative! Since the laundry room is just in front of the infirmary, it is quite easy to go there next.')
+                    dispatcher.utter_message(text='A new potent chemical is formed , just the smell is making you sleepy. Nice, you acquired the sedative! Grab to go next location!')
                     return [SlotSet('get_sedative', True),  SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Laundry_room", False),SlotSet("location_office", False)]
                 else:
                     dispatcher.utter_message(text='The ingredients you guessed are wrong. Try again before your potion explodes!')
@@ -187,6 +187,13 @@ class Show_locker_puzzles_or_other_unuseful_items(Action):
             print(checkitem)
             if 'washing machines' in checkitem:
                 dispatcher.utter_message(text='Nothing special here')
+            elif 'clothes basket' in checkitem:
+                dispatcher.utter_message(text='In the dirty clothes basket you find a handwritten note left behind. There are 5 sentences on the note. Could these help you cracking the code?')
+                dispatcher.utter_message(text='Clue 1: "I am the first digit in here, but the second prime"')
+                dispatcher.utter_message(text='Clue 2: "I am the second digit in here, but I am the first prime"')
+                dispatcher.utter_message(text='Clue 3: "I am the lucky prime number"')
+                dispatcher.utter_message(text='Clue 4: "I am the beginning but also the end, in addition I fade away and devided by I am infinity, I am neither positive nor negative but I am also both."')
+                dispatcher.utter_message(text='Clue 5: "In card games people sometimes mistake me as 6"')
             elif 'lockers' in checkitem:
                 dispatcher.utter_message(text= """
                     The lockers are locked and need a <b>5-digit code</b> to be opened. In the dirty clothes basket, you find a handwritten note left behind.
@@ -233,19 +240,28 @@ class OpenLockers(Action):
         else:
             dispatcher.utter_message(text="You can't do this, you are not in the laundry room.")
 
-
+#action_show_Kitchen_code
 class Gokitchen(Action):
     def name(self) -> Text:
-        return "action_show_Kitchen_code"
+        return "action_in_kitchen"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         if tracker.get_slot('get_uniform') == True:
-            dispatcher.utter_message("You pull the doorknob of the kitchen door but it won't budge. The note pinned to the door says the following: <b>I am a green veggie which kids think I look like a tiny tree but they also do not like eating me, huhu. What am I?</b>")
-            return [SlotSet('location_Kitchen', True),SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
+            dispatcher.utter_message("On the way you escaped the guards' patrol in your uniform and you successfully accessed the kitchen.")
+            dispatcher.utter_message('You can see delicious food being cooked on the stove, which should be the food for the prison guards. If you could have some kind of medicines to put in the food, you could make the guards faint and your further actions would be easier!')
+            if tracker.get_slot('get_sedative'):
+                dispatcher.utter_message('Great! You just got a sedative in the infirmary! You gently stir the pasta sauce as you mix in the sedatives. These guards will sleep like the dead.')
+                dispatcher.utter_message('Where do you want to go to next?')
+
+                return [SlotSet('guards_fainted',True),SlotSet('location_Kitchen', True),SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
+            else:
+                dispatcher.utter_message('Search other locations first, you have nothing else to do in the Kitchen now')
+                return [SlotSet('location_Kitchen', True),SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
+
         else:
-            dispatcher.utter_message('You ran into the patrol officers and you got caught immediatly. <b>Game Over</b>.')
+            dispatcher.utter_message('On the way you see a lot of prison guards patrolling, if you go to the kitchen now you will be arrested by them, please search another location first!.')
 
 class KitchenCode(Action):
     def name(self) -> Text:
@@ -304,8 +320,10 @@ class OfficeIn(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        if tracker.get_slot('guards_fainted') == False:
-            dispatcher.utter_message("You got caught! Game Over")
+        if tracker.get_slot('get_uniform'):
+            dispatcher.utter_message("Entering the warden's office there are guards to verify identity, just wearing the guard's uniform is not enough, you are now dangerous to come here, search for other location first!")
+        elif tracker.get_slot('guards_fainted') == False:
+            dispatcher.utter_message("The way to the warden office is full of guards, we can't go to this place yet, let's search other location first!")
         else:
             dispatcher.utter_message('You can hear the snores of the guards eminating from the cafeteria as you make your way towards the wardens office. Once inside, you can see a transparent cabinet, a telephone on the desk and a fancy leather chair. Try to find something useful.')
             return [SlotSet('location_office', True),SlotSet('location_Laundry_room', False), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False)]

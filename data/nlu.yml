@@ -310,7 +310,7 @@ nlu:
     - Can I have access to the dirty [clothes basket](items_in_Laundry_room)?
     - I'd like to take a peek at the [washing machines](items_in_Laundry_room)-
     - Is it allowed to examine the [lockers](items_in_Laundry_room) right now?
-    - I'm thinking of exploring the contents of the dirty [clothes basket](items_in_Laundry_room)-
+    - I'm thinking of exploring the contents of the dirty [basket](items_in_Laundry_room)-
     - Can you grant me permission to check the [washing machines](items_in_Laundry_room)?
     - I want to see what's inside the [lockers](items_in_Laundry_room)-
     - Is there any restriction on checking the dirty [clothes basket](items_in_Laundry_room)?
@@ -324,8 +324,8 @@ nlu:
 - intent: go_Kitchen
   examples: |
     - I want to go to the [Kitchen](locations)-
-    - Go to the [Kitchen](locations)-
-    - Move to the [Kitchen](locations)-
+    - Go to the [kitchen](locations)-
+    - Move to the [kitchen](locations)-
     - Can I go to the [Kitchen](locations)?
     - I would like to visit the [Kitchen](locations)-
     - Is it possible to access the [Kitchen](locations)?
@@ -376,7 +376,7 @@ nlu:
 - intent: go_office
   examples: |
     - I want to go Warden's [office](locations)
-    - go to the Warden's [office](locations)
+    - go to the Warden's [Office](locations)
     - move to the [office](locations)
     - Can I go to the Warden's [office](locations)?
     - I would like to visit the Warden's [office](locations)-
@@ -402,12 +402,12 @@ nlu:
     - look at [telephone](items_in_office)
     - have a look in desk [lamp](items_in_office)
     - check the dirty [chair](items_in_office)
-    - [telephone](items_in_office)
+    - [Telephone](items_in_office)
     - Can I inspect the transparent [cabinet](items_in_office)?
-    - I would like to examine the [telephone](items_in_office)-
+    - I would like to examine the [Phone](items_in_office)-
     - Is it possible to check the dirty [chair](items_in_office)?
     - I want to have a quick look at the transparent [cabinet](items_in_office)-
-    - Could you show me the [telephone](items_in_office)?
+    - Could you show me the [phone](items_in_office)?
     - I'm interested in inspecting the desk [lamp](items_in_office)-
     - Is there any problem if I check the dirty [chair](items_in_office)?
     - I'm curious to see what's in the [telephone](items_in_office)-
@@ -424,15 +424,15 @@ nlu:
     - [Son](called_person)
     - [Friend](called_person)
     - call [Son](called_person)
-    - call [Friend](called_person)
+    - call [Stefan](called_person)
     - dial [Son](called_person)
-    - dial [Friend](called_person)
-    - reach out to [Son](called_person)
-    - reach out to [Friend](called_person)
+    - dial [Stephan](called_person)
+    - reach out to [son](called_person)
+    - reach out to [friend](called_person)
 
 - intent: answer_son
   examples: | 
-    - [Paris](answer_to_son), [Rainbow](answer_to_son), [Sky](answer_to_son), [Giraffe](answer_to_son)
+    - [paris](answer_to_son), [rainbow](answer_to_son), [sky](answer_to_son), [giraffe](answer_to_son)
     - [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
 
     - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
@@ -663,23 +663,24 @@ nlu:
 - synonym: Paris
   examples: |
     - Paris 
+    - paris
     - Pariss
     - Pariss
 - synonym: Rainbow
   examples: |
-    - Rainbow
+    - rainbow
     - Rainbows
     - Rainbow
 - synonym: Sky
   examples: |
-    - Sky
+    - sky
     - variabel
     - Variabel
     - Skys
     - Skys
 - synonym: Giarffe
   examples: |
-    - Giarffe
+    - giarffe
     - Giarffes
     - Giarffes
 - synonym: Abandon

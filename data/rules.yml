@@ -41,16 +41,16 @@ rules:
 - rule: go kitchen
   steps:
     - intent: go_Kitchen
-    - action: action_show_Kitchen_code
-- rule: kitchen code
-  steps:
-    - intent: guess_kitchen_code
-    - action: action_vertification_Kitchens_code_and_show_kitchen_items
+    - action: action_in_kitchen
+#- rule: kitchen code
+#  steps:
+#    - intent: guess_kitchen_code
+#    - action: action_vertification_Kitchens_code_and_show_kitchen_items
 
-- rule: kitchen food
-  steps:
-    - intent: deal_with_food
-    - action: action_vertification_Kitchen_food
+#- rule: kitchen food
+#  steps:
+#    - intent: deal_with_food
+#    - action: action_vertification_Kitchen_food
 - rule: go office
   steps:
     - intent: go_office
