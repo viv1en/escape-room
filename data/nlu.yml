@@ -431,25 +431,25 @@ nlu:
     - reach out to [Friend](called_person)
 
 - intent: answer_son
-  examples: |
-    - [Array](answer_to_son), [List](answer_to_son), [Variable](answer_to_son), [Queue](answer_to_son)
-    - [Array](answer_to_son) [List](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son)
+  examples: | 
+    - [Paris](answer_to_son), [Rainbow](answer_to_son), [Sky](answer_to_son), [Giraffe](answer_to_son)
+    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
 
-    - [List](answer_to_son) [Array](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son)
-    - [List](answer_to_son) [Variable](answer_to_son) [Array](answer_to_son)  [Queue](answer_to_son)
-    - [List](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son) [Array](answer_to_son)
+    - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
+    - [Rainbow](answer_to_son) [Sky](answer_to_son) [Paris](answer_to_son)  [Giarffe](answer_to_son)
+    - [Rainbow](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son) [Paris](answer_to_son)
 
-    - [List](answer_to_son) [Array](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son)
-    - [Array](answer_to_son) [Variable](answer_to_son) [List](answer_to_son) [Queue](answer_to_son)
-    - [Array](answer_to_son) [Variable](answer_to_son) [Queue](answer_to_son) [List](answer_to_son)
+    - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
+    - [Paris](answer_to_son) [Sky](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son)
+    - [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son) [Rainbow](answer_to_son)
 
-    - [Variable](answer_to_son) [Array](answer_to_son) [List](answer_to_son) [Queue](answer_to_son)
-    - [Array](answer_to_son) [Variable](answer_to_son) [List](answer_to_son) [Queue](answer_to_son)
-    - [Array](answer_to_son) [List](answer_to_son) [Queue](answer_to_son) [Variable](answer_to_son)
+    - [Sky](answer_to_son) [Paris](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son)
+    - [Paris](answer_to_son) [Sky](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son)
+    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son) [Sky](answer_to_son)
 
-    - [Queue](answer_to_son) [Array](answer_to_son) [List](answer_to_son) [Variable](answer_to_son)
-    - [Array](answer_to_son) [Queue](answer_to_son) [List](answer_to_son) [Variable](answer_to_son)
-    - [Array](answer_to_son) [List](answer_to_son) [Queue](answer_to_son) [Variable](answer_to_son)
+    - [Giarffe](answer_to_son) [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son)
+    - [Paris](answer_to_son) [Giarffe](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son)
+    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son) [Sky](answer_to_son)
     
     
 
@@ -559,7 +559,7 @@ nlu:
   examples: |
     - helipad
     - Helipad
-    - helistop
+    - heRainbowop
     - landing pad
     - helicopter
 
@@ -660,28 +660,28 @@ nlu:
     - stephan
     - stefan
 
-- synonym: Array
+- synonym: Paris
   examples: |
-    - array 
-    - arrays
-    - Arrays
-- synonym: List
+    - Paris 
+    - Pariss
+    - Pariss
+- synonym: Rainbow
   examples: |
-    - list
-    - Lists
-    - List
-- synonym: Variable
+    - Rainbow
+    - Rainbows
+    - Rainbow
+- synonym: Sky
   examples: |
-    - variable
+    - Sky
     - variabel
     - Variabel
-    - variables
-    - Variables
-- synonym: Queue
+    - Skys
+    - Skys
+- synonym: Giarffe
   examples: |
-    - queue
-    - Queues
-    - queues
+    - Giarffe
+    - Giarffes
+    - Giarffes
 - synonym: Abandon
   examples: |
     - abandon
