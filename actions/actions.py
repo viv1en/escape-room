@@ -4,7 +4,6 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
-collect_infos_from_cellmates = []
 
 
 class CheckGuessAction(Action):
@@ -25,30 +24,38 @@ class CheckGuessAction(Action):
         if guess and talked_person:
             if talked_person == 'Maverick' and C == guess:
                 dispatcher.utter_message(text="""Maverick: "Correct guess my new friend! I assume you are trying to escape - if so, you might find me useful for your schemes. You can find sedatives and other drugs in the <i>Infirmary</i>. But be vigilant! Nurse Rose guards the infirmary fiercely. However, she cares for the ill and injured, so you can distract her by <b>claiming hunger or thirst</>. There is also the <i>Laundry Room</i>, which has staff uniforms effective for disguise. That's all I know... Ask the other two dirtbags about the rest of the rooms." """)
-                if 'room1' not in collect_infos_from_cellmates and 'room2' not in collect_infos_from_cellmates:
-                    collect_infos_from_cellmates.append('room1')
-                    collect_infos_from_cellmates.append('room2')
+                if tracker.get_slot("guess_b") and tracker.get_slot("guess_c"):
+                    dispatcher.utter_message(
+                        text="You have now collected all the information needed for an escape plan, congrats! But you still need to select which of the inmates you want to escape with. Choose wisely... Your very freedom depends on it!")
+                    return SlotSet("guess_a", True)
+                else:
+                    dispatcher.utter_message(
+                        text="You still don't have all the necessary information to form an escape plan, yet. Ask your inmates - they might know more...")
+                    return [SlotSet("guess_a", True)]
             elif talked_person == 'Mr.Clean' and B == guess:
                 dispatcher.utter_message(text="""Mr.Clean: "Spot-on, newbie!! As your reward for guessing right, I will tell you about 2 rooms of the prison. The 3rd room is the <i>Kitchen</i>, storing delicious food for guards and wardens. The <i>Warden's Office</i> is room 4, my personal favorite. It's equipped with a phone, a computer, and a stash of fancy whiskey. Used to sneak a sip until I got caught... Anyway, that was all I know. Now go away, I have other stuff to do." """)
-                if 'room3' not in collect_infos_from_cellmates and 'room4' not in collect_infos_from_cellmates:
-                    collect_infos_from_cellmates.append('room3')
-                    collect_infos_from_cellmates.append('room4')
+                if tracker.get_slot("guess_a") and tracker.get_slot("guess_c"):
+                    dispatcher.utter_message(
+                        text="You have now collected all the information needed for an escape plan, congrats! But you still need to select which of the inmates you want to escape with. Choose wisely... Your very freedom depends on it!")
+                    return SlotSet("guess_b", True)
+                else:
+                    dispatcher.utter_message(
+                        text="You still don't have all the necessary information to form an escape plan, yet. Ask your inmates - they might know more...")
+                    return [SlotSet("guess_b", True)]
             elif talked_person == 'Jailer Jake' and A == guess:
                 dispatcher.utter_message(text="""Jailer Jake: "Right on target, inmate! Heard you're gathering info about the rooms in this hellhole. I might keep your secret, or maybe not, who knows. Anyway, the only way to get out of here is by air. I saw a <i>helicopter pad</i> outside the warden's office just under the window. If you let me join you, I will give you the phone number to of my friend to call a helicopter to this location. OK, that's all I know. Go bother somebody else now." """)
-                if 'room5' not in collect_infos_from_cellmates and 'room6' not in collect_infos_from_cellmates:
-                    collect_infos_from_cellmates.append('room5')
-                    collect_infos_from_cellmates.append('room6')
+                if tracker.get_slot("guess_b") and tracker.get_slot("guess_a"):
+                    dispatcher.utter_message(
+                        text="You have now collected all the information needed for an escape plan, congrats! But you still need to select which of the inmates you want to escape with. Choose wisely... Your very freedom depends on it!")
+                    return SlotSet("guess_c", True)
+                else:
+                    dispatcher.utter_message(
+                        text="You still don't have all the necessary information to form an escape plan, yet. Ask your inmates - they might know more...")
+                    return [SlotSet("guess_c", True)]
             else:
                 dispatcher.utter_message(text="Wrong guess, buddy！Try again.")
         else:
             dispatcher.utter_message(text="Sorry, I didn't get you. Could you say that in a different manner?")
-
-        if len(collect_infos_from_cellmates) == 6:
-            dispatcher.utter_message(text="You have now collected all the information needed for an escape plan, congrats! But you still need to select which of the inmates you want to escape with. Choose wisely... Your very freedom depends on it!")
-            return [SlotSet('select_member', True)]
-        else:
-            dispatcher.utter_message(text="You still don't have all the necessary information to form an escape plan, yet. Ask your inmates - they might know more...")
-        return [SlotSet("profession", None), SlotSet("person", None)]
 
 
 class CheckSelectAction(Action):
@@ -67,15 +74,12 @@ class CheckSelectAction(Action):
             <li>Go to the <i>infirmary</i> and get a strong sedative, which you will later mix into the food eaten by the prison guards.</li>
             <li>Enter the <i>kitchen</i> and disguise yourself as an employee of the facility. The <i>laundry room</i> might have some spare guard uniforms that will fit you.</li>
             <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
-            <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
-            <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
-            <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
             <li>Get to the <i>Heli pad</i>, and you're as good as free.</li>
             </ol>
 
             Now off you go – time waits for no one! You can look at the map (type in "<i>Map</i>" to access).
             """)
-            return []
+            return [SlotSet('select_member', True)]
         else:
             dispatcher.utter_message(
                 text="The inmates you didn't recruit heard your plan and ratted you out for a reduced sentence!")

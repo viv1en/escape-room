@@ -45,6 +45,21 @@ entities:
   - all
 
 slots:
+  guess_a:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  guess_b:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  guess_c:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
   location_cell:
     type: bool
     initial_value: true
