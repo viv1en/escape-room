@@ -101,6 +101,26 @@ rules:
   steps:
     - intent: go_Heli_Pad
     - action: action_vertification_go_helipad
+
+
+- rule: check locations
+  steps:
+    - intent: check_location
+    - action: action_show_collection
+- rule: go_Laundry_room
+  steps:
+    - intent: go_Laundry_room
+    - action: action_show_Laundry_room
+- rule: check_Laundry_room
+  steps:
+    - intent: check_Laundry_room
+    - action: action_show_locker_puzzles_or_other_unuseful_items
+- rule: unlock the lockers
+  steps:
+    - intent: openlockers
+    - action: action_vertification_locker_puzzles
+
+
 - rule: storyending
   steps:
     - intent: deal_with_M

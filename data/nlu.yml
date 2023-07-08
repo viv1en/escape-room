@@ -109,15 +109,17 @@ nlu:
 
 - intent: ask_join
   examples: |
-    - add  [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
-    - recruit everyone
-    - I want everyone
-    - everyone
-    - add everyone
-    - all
-    - all of them
+    - select [maverick](person), [mr.clean](person), and [Jake](person)
+    - select [maverick](person)
+    - add [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
+    - recruit [everyone](all)
+    - I want [everyone](all)
+    - [everyone](all)
+    - add [everyone](all)
+    - [all](all)
+    - [all](all) of them
     - [maverick](person), [mr.clean](person), [jailer jake](person)
-    - keep  [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
+    - keep [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
     - consider  [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
     - I would like to add [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person) as recruits-
     - I choose [Maverick](person) and [Mr.Clean](person) as recruits-
@@ -164,6 +166,7 @@ nlu:
 - intent: confirm_get_punched
   examples: |
     - yes
+    - sure
     - punch me
     - it's ok
     - you can punch me 
@@ -248,24 +251,24 @@ nlu:
 
 - intent: mix_ingredient
   examples: |
-    - I want to choose [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - I want to choose [Lavender](ingredients), [Sunflower](ingredients), [cayenne](ingredients), [Bioluminescent Algae](ingredients)
     - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
-    - The ingredients are [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
+    - The ingredients are [lavender](ingredients), [sunflower](ingredients), [cayenne pepper](ingredients), [bioluminescent algae](ingredients)
     - I like to have [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
     - I choose [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
     - [Lavender](ingredients), [Sunflower](ingredients), [Cayenne Pepper](ingredients), [Bioluminescent Algae](ingredients)
-    - [Lavender](ingredients) [Sunflower](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [Sunflower](ingredients) [Cayenne](ingredients) [Bioluminescent Algae](ingredients)
     - [Lavender](ingredients) [Bioluminescent Algae](ingredients) [Sunflower](ingredients) [Cayenne Pepper](ingredients) 
     - [Lavender](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients) [Cayenne Pepper](ingredients) 
     - [Bioluminescent Algae](ingredients) [Lavender](ingredients) [Sunflower](ingredients) [Cayenne Pepper](ingredients)
     - [Sunflower](ingredients) [Cayenne Pepper](ingredients) [Lavender](ingredients) [Bioluminescent Algae](ingredients)
     - [Sunflower](ingredients) [Lavender](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients)
     - [Sunflower](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients) [Lavender](ingredients)
-    - [Sunflower](ingredients) [Lavender](ingredients) [Cayenne Pepper](ingredients) [Bioluminescent Algae](ingredients)
-    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
-    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
+    - [Sunflower](ingredients) [Lavender](ingredients) [Cayenne Pepper](ingredients) [Algae](ingredients)
+    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [algae](ingredients)
+    - [Lavender](ingredients) [Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
     - [Cayenne Pepper](ingredients) [Lavender](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
-    - [Lavender](ingredients) [Cayenne Pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
+    - [Lavender](ingredients) [pepper](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients)
     - [Lavender](ingredients) [Sunflower](ingredients) [Bioluminescent Algae](ingredients) [Cayenne Pepper](ingredients)
     
 

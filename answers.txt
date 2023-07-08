@@ -1,4 +1,4 @@
 Lavender, Sunflower, Cayenne Pepper, Bioluminescent Algae  
 Brocolli
 3 2 7 0 9
-'Array', 'List', 'Variable', 'Queue'
+'Paris', 'Rainbow', 'Sky', 'Giraffe'
