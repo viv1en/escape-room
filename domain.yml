@@ -165,26 +165,26 @@ slots:
      - type: custom
 responses:
   utter_greet:
-  - text: "You wake up groggy and dehydrated. This has been your morning for the last few months. Wiping the sleep from your eyes, you find yourself yet again in the prison cell the guards threw you in months ago. Three other men are in the room with you. During all the days you have spent together here, they haven’t given you their real names, so you just refer to them as Maverick, Mr.Clean and Jailer Jake. One is reading, while the other one stares at a crossword puzzle. The third one is sleeping and snoring loudly. 
-You swore yourself to find a way out of this place and have been cooking up an escape plan. You know it won’t be easy and that you won’t make it out on your own, but who can you trust inside these walls? You have considered asking your inmates for help, but haven’t decided if that's a wise decision. It’s time to get going. What should you do next?.
- <b> Talking to your cellmates seems like a good start.</b> They have been here longer than you have and might mention something that could be useful for your escape..."
+  - text: "Waking up groggy and dehydrated, you find yourself stuck in the same old prison cell ⛓️. Alongside you are your three mysterious cellmates who go by the names of Jailer Jake, Mr. Clean, and Maverick (or so you call them)</b>.
+<br>You swore yourself to find a way out of this place and have been cooking up an escape plan. You know it won’t be easy and that you won’t make it out on your own, but who can you trust inside these walls?
+ <b> Talking to your cellmates seems like a good start.</b> They have been here longer than you have and might mention something that could be useful for your escape...👀"
   utter_C_riddles:
-  - text: "Jailer Jake: Hello new inmate. We can be friends if you guess the profession I had before being incarcerated.<i>'I wear a uniform, stern and tough, In this cell block, I've seen enough. Keys and bars are part of my day, Maintaining order, come what may'.
-Who am I?</i>"
+  - text: " <b style='color: MidnightBlue;'>🗣️ Jailer Jake 🗣️</b> Hello, new inmate. We can be friends if you guess the profession I had before being incarcerated.<br><i style='color: IndianRed;'>'I wear a uniform, stern and tough, In this cell block, I've seen enough. Keys and bars are part of my day, Maintaining order, come what may 🗝️.'
+Who am I?</i> "
   utter_B_riddles:
-  - text: "Mr.Clean: Whatsup new fish ? If you want to talk with me you need to guess my profession at first. <i>'In this place, I clean and sweep, No task too dirty, no mess too deep. From mopping floors to taking out trash, My role is crucial, in every clash.'
-Who am I?</i>"
+  - text: "<b style='color: MidnightBlue;'>🗣️ Mr.Clean 🗣️</b> Whatsup, new fish ? If you want to talk with me you need to guess my profession at first.<br> <i style='color: IndianRed;'>'In this place, I clean and sweep, No task too dirty, no mess too deep. From mopping floors to taking out trash, My role is crucial, in every clash 🧹.'
+Who am I?</i> "
   utter_A_riddles:
-  - text: "Maverick: Hello cellmate wanna guess my profession as well? Here is a riddle that would help you. <i>'I take to the skies, high and wide, A captain of the clouds, I glide. Navigating planes with skill and grace, Traversing borders, from place to place.'
+  - text: "<b style='color: MidnightBlue;'>🗣️ Maverick 🗣️</b> Hello cellmate wanna guess my profession as well? Here is a riddle that would help you. <br><i style='color: IndianRed;'>'I take to the skies, high and wide, A captain of the clouds, I glide. Navigating planes with skill and grace, Traversing borders, from place to place ✈️.'
 Who am I?</i>"
   utter_mate_ratted:
-  - text: "You made the wrong decision. All inmates heard your escape plan and the ones you didn't recruit ratted you out for a reduced sentence."
+  - text: "<h1>You made the wrong decision ❌.</h1> All inmates heard your escape plan and the ones you didn't recruit ratted you out for a reduced sentence!"
   utter_goodbye:
   - text: "Bye"
   utter_mateb_punch:
-  - text: 'Maverick: "There is no way you can just walk into the infirmery you are in a prison after all. Well at least not when you look healthy. There is a way to get you there quickly but it will hurt... One of us will punch you really hard to the point that the guards will have no choice but to take you to the infirmery to patch you up. So do you wanna do it?"'
+  - text: "<b style='color: MidnightBlue;'>🗣️ Maverick 🗣️</b> No easy walk into the infirmary, my friend. We're in a prison after all! But we could fast-track you there by giving you a good ol' punch 👊. Once the guards see you all battered, they'll rush you there for patching up. Ready to take one for the team? 😅"
   utter_able_check_inf:
-  - text: "You are now alone in the infirmary, you can look around and do what you want. But you gotta do it fast cause the nurse might come back at any time!"
+  - text: "You are now alone in the infirmary, you can look around and do what you want 🔍. But you gotta do it <b>fast</b> cause the nurse might come back at any time!"
 actions:
   - action_check_guess
   - action_check_asked_mates

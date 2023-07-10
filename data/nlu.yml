@@ -110,6 +110,7 @@ nlu:
 - intent: ask_join
   examples: |
     - select [maverick](person), [mr.clean](person), and [Jake](person)
+    - ask [maverick](person), [mr.clean](person), and [Jake](person) to come with me
     - select [maverick](person)
     - add [Maverick](person), [Mr.Clean](person), and [Jailer Jake](person)
     - recruit [everyone](all)
@@ -188,6 +189,11 @@ nlu:
 
 - intent: distract_nurse
   examples: |
+    - ask Rose for water 
+    - ask the nurse for food
+    - water
+    - food
+    - ask the nurse for food
     - I want food
     - I am super hungry, can you pick some food for me?
     - I am dirty now, can I get a new Pajamas
@@ -436,23 +442,23 @@ nlu:
 - intent: answer_son
   examples: | 
     - [paris](answer_to_son), [rainbow](answer_to_son), [sky](answer_to_son), [giraffe](answer_to_son)
-    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
+    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son) [Giraffe](answer_to_son)
 
-    - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
-    - [Rainbow](answer_to_son) [Sky](answer_to_son) [Paris](answer_to_son)  [Giarffe](answer_to_son)
-    - [Rainbow](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son) [Paris](answer_to_son)
+    - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giraffe](answer_to_son)
+    - [Rainbow](answer_to_son) [Sky](answer_to_son) [Paris](answer_to_son)  [Giraffe](answer_to_son)
+    - [Rainbow](answer_to_son) [Sky](answer_to_son) [Giraffe](answer_to_son) [Paris](answer_to_son)
 
-    - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son)
-    - [Paris](answer_to_son) [Sky](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son)
-    - [Paris](answer_to_son) [Sky](answer_to_son) [Giarffe](answer_to_son) [Rainbow](answer_to_son)
+    - [Rainbow](answer_to_son) [Paris](answer_to_son) [Sky](answer_to_son) [Giraffe](answer_to_son)
+    - [Paris](answer_to_son) [Sky](answer_to_son) [Rainbow](answer_to_son) [Giraffe](answer_to_son)
+    - [Paris](answer_to_son) [Sky](answer_to_son) [Giraffe](answer_to_son) [Rainbow](answer_to_son)
 
-    - [Sky](answer_to_son) [Paris](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son)
-    - [Paris](answer_to_son) [Sky](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son)
-    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son) [Sky](answer_to_son)
+    - [Sky](answer_to_son) [Paris](answer_to_son) [Rainbow](answer_to_son) [Giraffe](answer_to_son)
+    - [Paris](answer_to_son) [Sky](answer_to_son) [Rainbow](answer_to_son) [Giraffe](answer_to_son)
+    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Giraffe](answer_to_son) [Sky](answer_to_son)
 
-    - [Giarffe](answer_to_son) [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son)
-    - [Paris](answer_to_son) [Giarffe](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son)
-    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Giarffe](answer_to_son) [Sky](answer_to_son)
+    - [Giraffe](answer_to_son) [Paris](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son)
+    - [Paris](answer_to_son) [Giraffe](answer_to_son) [Rainbow](answer_to_son) [Sky](answer_to_son)
+    - [Paris](answer_to_son) [Rainbow](answer_to_son) [Giraffe](answer_to_son) [Sky](answer_to_son)
     
     
 
@@ -507,6 +513,10 @@ nlu:
     - mr. clean
     - Clean
     - clean
+    - Mr.Clean
+    - mr clean
+    - Mister Clean
+    - mister clean
 - synonym: Jailer Jake
   examples: |
     - Jake
@@ -539,7 +549,6 @@ nlu:
     - Airman
     - airman
     
-
 
 
 - synonym: Infirmary
@@ -586,11 +595,13 @@ nlu:
     - Sun
     - Flower
     - flower
+
 - synonym: Bioluminescent Algae
   examples: |
     - bioluminescent algae
     - Bioluminescent
     - Algae
+
 - synonym: Lavender
   examples: |
     - lavender
@@ -646,6 +657,7 @@ nlu:
     - Telephone
     - Phone
     - phone
+
 - synonym: chair
   examples: |
     - Chair
@@ -654,6 +666,8 @@ nlu:
 - synonym: Son
   examples: |
     - son
+    - son of the friend
+    - Son of the Friend
 
 - synonym: Friend
   examples: |
@@ -681,11 +695,15 @@ nlu:
     - Variabel
     - Skys
     - Skys
-- synonym: Giarffe
+    - Air
+- synonym: Giraffe
   examples: |
-    - giarffe
-    - Giarffes
-    - Giarffes
+    - Giraffe
+    - giraffe
+    - Giraffe
+    - Giraffes
+    - Giarffe
+    - Giraffes
 - synonym: Abandon
   examples: |
     - abandon
