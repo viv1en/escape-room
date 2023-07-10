@@ -165,7 +165,7 @@ slots:
      - type: custom
 responses:
   utter_greet:
-  - text: "Waking up groggy and dehydrated, you find yourself stuck in the same old prison cell ⛓️. Alongside you are your three mysterious cellmates who go by the names of Jailer Jake, Mr. Clean, and Maverick (or so you call them)</b>.
+  - text: "Waking up groggy and dehydrated, you find yourself stuck in the same old prison cell ⛓️. Alongside you are your three mysterious cellmates who go by the names of <b style='color: MidnightBlue;'>Jailer Jake, Mr. Clean,</b> and <b style='color: MidnightBlue;'>Maverick</b> (or so you call them)</b>.
 <br>You swore yourself to find a way out of this place and have been cooking up an escape plan. You know it won’t be easy and that you won’t make it out on your own, but who can you trust inside these walls?
  <b> Talking to your cellmates seems like a good start.</b> They have been here longer than you have and might mention something that could be useful for your escape...👀"
   utter_C_riddles:
