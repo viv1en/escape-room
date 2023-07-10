@@ -27,7 +27,18 @@ class CheckGuessAction(Action):
                 if tracker.get_slot("guess_b") and tracker.get_slot("guess_c"):
                     dispatcher.utter_message(
                         text="You have now collected all the information needed for an escape plan. <span style='color: LimeGreen;>Congrats 🎉</span>! But you still need to <b>select which of the inmates you want to escape with.</b> Choose wisely... Your very freedom depends on it!")
-                    return SlotSet("guess_a", True)
+                    dispatcher.utter_message(text="""
+                                        You and your newfound mates sit down to discuss the escape plan in hushed voices. After hours of less than cordial deliberations, you have agreed to the following:
+                                        <ol>
+                                        <li>Go to the <i>infirmary</i> and get a strong sedative, which you will later mix into the food eaten by the prison guards.</li>
+                                        <li>Enter the <i>kitchen</i> and disguise yourself as an employee of the facility. The <i>laundry room</i> might have some spare guard uniforms that will fit you.</li>
+                                        <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
+                                        <li>Get to the <i>Heli pad</i>, and you're as good as free.</li>
+                                        </ol>
+
+                                        Now off you go – time waits for no one! You can look at the map (type in "<i>Map</i>" to access).
+                                        """)
+                    return [SlotSet('select_member', True), SlotSet("guess_a", True)]
                 else:
                     dispatcher.utter_message(
                         text="You still don't have all the necessary information to form an escape plan, yet. <b>Ask your inmates</b> - they might know more...")
@@ -37,7 +48,18 @@ class CheckGuessAction(Action):
                 if tracker.get_slot("guess_a") and tracker.get_slot("guess_c"):
                     dispatcher.utter_message(
                         text="You have now collected all the information needed for an escape plan, <span style='color: LimeGreen;>Congrats 🎉</span>!  But you still need to <b>select which of the inmates you want to escape with.</b> Choose wisely... Your very freedom depends on it!")
-                    return SlotSet("guess_b", True)
+                    dispatcher.utter_message(text="""
+                    You and your newfound mates sit down to discuss the escape plan in hushed voices. After hours of less than cordial deliberations, you have agreed to the following:
+                    <ol>
+                    <li>Go to the <i>infirmary</i> and get a strong sedative, which you will later mix into the food eaten by the prison guards.</li>
+                    <li>Enter the <i>kitchen</i> and disguise yourself as an employee of the facility. The <i>laundry room</i> might have some spare guard uniforms that will fit you.</li>
+                    <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
+                    <li>Get to the <i>Heli pad</i>, and you're as good as free.</li>
+                    </ol>
+
+                    Now off you go – time waits for no one! You can look at the map (type in "<i>Map</i>" to access).
+                    """)
+                    return [SlotSet('select_member', True),  SlotSet("guess_b", True)]
                 else:
                     dispatcher.utter_message(
                         text="You still don't have all the necessary information to form an escape plan, yet. Ask your inmates - they might know more...")
@@ -47,7 +69,18 @@ class CheckGuessAction(Action):
                 if tracker.get_slot("guess_b") and tracker.get_slot("guess_a"):
                     dispatcher.utter_message(
                         text="You have gathered enough information needed for an escape plan, nice! But <b>you still need to recruit your escape companions.</b> Choose wisely... Your very freedom depends on it!")
-                    return SlotSet("guess_c", True)
+                    dispatcher.utter_message(text="""
+                    You and your newfound mates sit down to discuss the escape plan in hushed voices. After hours of less than cordial deliberations, you have agreed to the following:
+                    <ol>
+                    <li>Go to the <i>infirmary</i> and get a strong sedative, which you will later mix into the food eaten by the prison guards.</li>
+                    <li>Enter the <i>kitchen</i> and disguise yourself as an employee of the facility. The <i>laundry room</i> might have some spare guard uniforms that will fit you.</li>
+                    <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
+                    <li>Get to the <i>Heli pad</i>, and you're as good as free.</li>
+                    </ol>
+
+                    Now off you go – time waits for no one! You can look at the map (type in "<i>Map</i>" to access).
+                    """)
+                    return [SlotSet("guess_c", True), SlotSet("select_member", True)]
                 else:
                     dispatcher.utter_message(
                         text="You still don't have all the necessary information to form an escape plan, yet. <b>Ask your inmates </b>- they might know more...🫣")
@@ -108,6 +141,14 @@ class ShowLocationAction(Action):
         if tracker.get_slot('select_member'):
             dispatcher.utter_message(
                 text="The rooms in this prison are as follows: | Cell | , | Infirmary | , | Kitchen | , | Laundry Room | , | Warden's office | , | Heli Pad | , which do you plan to access next?")
+            dispatcher.utter_message(
+                text="""Here is you escape plan review:
+                <ol>
+                    <li>Go to the <i>infirmary</i> and get a strong sedative, which you will later mix into the food eaten by the prison guards.</li>
+                    <li>Enter the <i>kitchen</i> and disguise yourself as an employee of the facility. The <i>laundry room</i> might have some spare guard uniforms that will fit you.</li>
+                    <li>After sedating the guards, you need to call the helicopter to your location. B mentioned that the <i>warden</i> has a phone in her office.</li>
+                    <li>Get to the <i>Heli pad</i>, and you're as good as free.</li>
+                </ol>""")
         else:
             dispatcher.utter_message(text="You cannot view the Map at the moment")
 
@@ -340,10 +381,10 @@ class OfficeItems(Action):
             officeitem = [e['value'] for e in tracker.latest_message['entities'] if
                                e['entity'] == 'items_in_office']
             if 'telephone' in officeitem:
-                dispatcher.utter_message('You can use the phone to call someone for help. However, time is running out so you can make one crucial call. Make a choice, <b>who do you want to call?</b> The <b>son of the pilot</b> cellmate who is also a pilot or your <b>rich best friend Stefan</b> who you worked together as a lawyer with.')
+                dispatcher.utter_message('You can use the phone to call the <b>son of the pilot</b>. Time is running out,')
                 return [SlotSet('phone_ready',True)]
             elif 'cabinet' in officeitem:
-                dispatcher.utter_message('You found a huge check, the payer is hung up by link, the name can be vaguely seen with the beginning of S and end of n')
+                dispatcher.utter_message('Thao and Ilya pls change text')
             else:
                 dispatcher.utter_message('Nothing special here...')
         else:
@@ -360,9 +401,9 @@ class OfficePhone(Action):
         if tracker.get_slot('phone_ready'):
             calledperson = [e['value'] for e in tracker.latest_message['entities'] if
                           e['entity'] == 'called_person']
-            if 'Friend' in calledperson:
-                dispatcher.utter_message('Your friend is corrupt along with the warden and is involved in your framing he does not want you to get out. He reported you, and you are locked up again')
-            elif 'Son' in calledperson:
+          #  if 'Friend' in calledperson:
+         #       dispatcher.utter_message('Your friend is corrupt along with the warden and is involved in your framing he does not want you to get out. He reported you, and you are locked up again')
+            if 'Son' in calledperson:
                 dispatcher.utter_message("""After waiting for a few seconds, someone finally picks up: "Oh so YOU are the new mate my dad talked about! Well, well if you want my aid you first need to help me with my homework. <b>Solve these riddles for me</b> and in return, I get you the helicopter. An eye for an eye as Pops used to say!"
                             <ul>
                              <li>I am the capital of a country where baguettes and croissants are famous.</li>
@@ -373,9 +414,9 @@ class OfficePhone(Action):
 
                 return [SlotSet('phone_son',True)]
             else:
-                dispatcher.utter_message('Not this choice!')
+                dispatcher.utter_message('No this choice!')
         else:
-            dispatcher.utter_message('You can not do this action!')
+            dispatcher.utter_message('You can not do this action now!')
 
 
 

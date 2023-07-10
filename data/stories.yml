@@ -24,10 +24,10 @@ stories:
   - action: utter_C_riddles
   - intent: guess_mates
   - action: action_check_guess
-- story: select cellmates
-  steps:
-    - intent: ask_join
-    - action: action_check_asked_mates
+#- story: select cellmates
+ # steps:
+  #  - intent: ask_join
+   # - action: action_check_asked_mates
 - story: check locations
   steps:
     - intent: check_location

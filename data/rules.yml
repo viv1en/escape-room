@@ -30,10 +30,10 @@ rules:
   steps:
   - intent: guess_mates
   - action: action_check_guess
-- rule: select cellmates
-  steps:
-    - intent: ask_join
-    - action: action_check_asked_mates
+#- rule: select cellmates
+  #steps:
+  #  - intent: ask_join
+ #   - action: action_check_asked_mates
 - rule: check map show locations
   steps:
     - intent: check_location
