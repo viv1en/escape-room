@@ -153,6 +153,8 @@ nlu:
     - Show me the map
     - See Map
     - What rooms are available
+    - escape plan
+    - show me the plan
 - intent: go_Infirmary
   examples: |
     - I plan to access the [Infirmary](locations)
@@ -175,6 +177,7 @@ nlu:
     - I guess there is no other way
     - oK
     - ok
+    - okay
 
 - intent: deny_get_punched
   examples: |
@@ -487,21 +490,19 @@ nlu:
 
 - intent: deal_with_M
   examples: |
-    - [Abandon](deal_M) him
+    - [Abandon](deal_M) them
     - [Abandon](deal_M) 
-    - [Confront](deal_M)
-    - [Confront](deal_M) with him
-    - [Agree](deal_M)
-
+    - [Invite](deal_M)
+    - [Invite](deal_M) them aboard
+    - [Invite](deal_M) them
+    - [Invite](deal_M) them with you
+ 
 - intent: restart
   examples: |
     - restart
     - reset
     - play again
     
-
-
-
 - synonym: Maverick
   examples: |
     - maverick
@@ -517,6 +518,7 @@ nlu:
     - mr clean
     - Mister Clean
     - mister clean
+    - mrclean
 - synonym: Jailer Jake
   examples: |
     - Jake
@@ -524,6 +526,7 @@ nlu:
     - jailer jake
     - jake
     - jailer
+    - jailerjake
 - synonym: Prison Guard
   examples: |
     - Guard
@@ -531,8 +534,6 @@ nlu:
     - prison guard 
     - prisonguard
     - Prison warden
-
-
     
 
 - synonym: Janitor
@@ -656,6 +657,7 @@ nlu:
     - Telefone
     - Telephone
     - Phone
+    - telefon
     - phone
 
 - synonym: chair
@@ -666,8 +668,14 @@ nlu:
 - synonym: Son
   examples: |
     - son
+    - son of the pilot
+    - Son of pilot
     - son of the friend
     - Son of the Friend
+    - son of maverick 
+    - son of the pilot Maverick
+    - son of the pilot maverick
+    
 
 - synonym: Friend
   examples: |
@@ -696,6 +704,7 @@ nlu:
     - Skys
     - Skys
     - Air
+    - air
 - synonym: Giraffe
   examples: |
     - Giraffe
@@ -704,18 +713,21 @@ nlu:
     - Giraffes
     - Giarffe
     - Giraffes
+
 - synonym: Abandon
   examples: |
     - abandon
     - reject
     - Reject
-- synonym: Confront
-  examples: |
-    - confront
-    - Confrontation
-    - Con
-    - con 
+    - go alone
+    - alone
+    - take the helicopter alone
+    - leave them behind
 
-- synonym: Agree
+- synonym: Invite
   examples: |
-    - agree
+    - invite 
+    - take 
+    - bring
+
+
