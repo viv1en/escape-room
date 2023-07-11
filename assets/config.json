@@ -1,8 +1,7 @@
 {
     "escape_room_name": "Prison Break",
-    "chatbot_name": "local-bot",
-    "user_name": "Player",
-    "messagebox_caption": "What should I do next...?",
+    "chatbot_name": "🤖",
+    "messagebox_caption": "What should I do next...⛓️?",
     "send_button_caption": "Proceed",
     "user_name": "You",
     "id": "prison-break",
