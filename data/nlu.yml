@@ -733,5 +733,7 @@ nlu:
     - invite 
     - take 
     - bring
+    - let
+    - take
 
 
