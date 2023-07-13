@@ -401,9 +401,9 @@ class OfficePhone(Action):
                 dispatcher.utter_message("""After waiting for a few seconds, someone finally picks up:
                             <br> 🗣️ "Oh so <b>YOU</b> are the new mate my dad talked about! Well, well if you want my aid you first need to help me with my homework. <b>Solve these riddles for me</b> and in return, I get you the helicopter. An eye for an eye as Pops used to say!"
                             <ul>
-                             <li>I am the capital of a country where baguettes and croissants are famous🥐🥖.</li>
-                             <li>I am a colorful arc up in the sky, after rain🌧️, you'll see me up high.</li>
-                             <li>I am a place where birds roam free, where you can feel the wind and be as you want to be🕊️.</li>
+                             <li>I am the capital of a country where baguettes and croissants are famous 🥐🥖.</li>
+                             <li>I am a colorful arc up in the sky, after rain 🌧️, you'll see me up high.</li>
+                             <li>I am a place where birds roam free, where you can feel the wind and be as you want to be 🕊️.</li>
                              <li>I am an animal with a long neck, spotted coat, and like to eat lots of greens! </li>
                              </ul>""")
 
@@ -449,8 +449,8 @@ class GoHelipad(Action):
         if tracker.get_slot('get_helicopter'):
             dispatcher.utter_message(""" You've arrived at the <i>Helicopter Pad</i> 🚁, the gateway to freedom! As the chopper waits, a critical question looms: Should you bring <b>Maverick, Jailor Jake, and Mr. Clean</b> along? They're dangerous criminals after all! Time is slipping away, and you must make a final call ⏳:
             <ul style="list-style-type:none;">
-            <li><b style="font-size:1.3em;">Abandon them:</b> Time is precious, and you can't risk being slowed down.</li>
-            <li><b style="font-size:1.3em;">Invite them aboard:</b> Embrace the unexpected and join forces for a wild escape!</li>""")
+            <li><b style="font-size:1.3em, color: red;">Abandon them:</b> Time is precious, and you can't risk being slowed down.</li>
+            <li><b style="font-size:1.3em, color: red;">Invite them aboard:</b> Embrace the unexpected and join forces for a wild escape!</li>""")
             return [SlotSet('location_Heli_Pad', True),SlotSet('location_Laundry_room', False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
         else:
             dispatcher.utter_message('The <i>Helicopter Pad</i> 🚁 is empty, try to search another location first!')
