@@ -436,6 +436,7 @@ nlu:
     - [Son](called_person)
     - [Friend](called_person)
     - call [Son](called_person)
+    - call the [Son](called_person)
     - call [Stefan](called_person)
     - dial [Son](called_person)
     - dial [Stephan](called_person)
