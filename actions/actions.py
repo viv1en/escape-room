@@ -23,7 +23,7 @@ class CheckGuessAction(Action):
         print(tracker.get_slot("person"))
         if guess and talked_person:
             if talked_person == 'Maverick' and C == guess:
-                dispatcher.utter_message(text="""<b style='color: MidnightBlue;'>🗣️ Maverick 🗣️</b>:<ul style='list-style-type:none;'> Correct guess my new friend! I assume you are trying to escape - if so, you might find me useful for your schemes. <br>You can find sedatives and other drugs in the <i>Infirmary</i> 🏥. But be vigilant! Nurse Rose guards the infirmary fiercely. However, she cares for the ill and injured, so you can distract her by <b>claiming that you are hungry or thirsty</b>. There is also the <i>Laundry Room</i> 🧺, which has staff uniforms effective for disguise. That's all I know... <br>Ask the other two dirtbags about the rest of the rooms! """)
+                dispatcher.utter_message(text="""<b style='color: MidnightBlue;'>🗣️ Maverick 🗣️</b>:<ul style='list-style-type:none;'> Right on target, inmate! Heard you're gathering info about the rooms in this hellhole. <br>The only way to get out of here is by air. I saw a <i>Helicopter Pad 🚁</i> outside the warden's office just under the window. If we work together, I will give you the phone number of my son to call a helicopter to this location 😉.""")
                 if tracker.get_slot("guess_b") and tracker.get_slot("guess_c"):
                     dispatcher.utter_message(
                         text="You have now collected all the information needed for an escape plan. <span style='color: LimeGreen;>Congrats 🎉</span>! But you still need to <b>select which of the inmates you want to escape with.</b> Choose wisely... Your very freedom depends on it!")
@@ -62,7 +62,7 @@ class CheckGuessAction(Action):
                         text="You still don't have all the necessary information to form an escape plan, yet. Ask your inmates - they might know more...")
                     return [SlotSet("guess_b", True)]
             elif talked_person == 'Jailer Jake' and A == guess:
-                dispatcher.utter_message(text="""<b style='color: MidnightBlue;'>🗣️Jailer Jake🗣️</b>: <ul style='list-style-type:none;'> Right on target, inmate! Heard you're gathering info about the rooms in this hellhole. <br>The only way to get out of here is by air. I saw a <i>Helicopter Pad 🚁</i> outside the warden's office just under the window. If you let me join you, I will give you the phone number to of my friend to call a helicopter to this location. That's all I know." """)
+                dispatcher.utter_message(text="""<b style='color: MidnightBlue;'>🗣️Jailer Jake🗣️</b>: <ul style='list-style-type:none;'> Correct guess my new friend! I assume you are trying to escape - if so, you might find me useful for your schemes. <br>You can find sedatives and other drugs in the <i>Infirmary</i> 🏥. But be vigilant! Nurse Rose guards the infirmary fiercely. However, she cares for the ill and injured, so you can distract her by <b>claiming that you are hungry or thirsty</b>. There is also the <i>Laundry Room</i> 🧺, which has staff uniforms effective for disguise. That's all I know.  """)
                 if tracker.get_slot("guess_b") and tracker.get_slot("guess_a"):
                     dispatcher.utter_message(
                         text=""" You have gathered enough information needed for an escape plan, nice! But <b>you still need to recruit your escape companions.</b> Choose wisely... Your very freedom depends on it!
@@ -136,14 +136,14 @@ class ShowLocationAction(Action):
         print(tracker.get_slot('select_member'))
         if tracker.get_slot('select_member'):
             dispatcher.utter_message(
-                text="""<b style='color: Olive;'>The map</b> <br> | Cell ⛓️| , | Infirmary 🏥| , | Laundry Room 🧺|,  | Kitchen 🍽️|  , | Warden's office ☎️| , | Helicopter Pad 🚁| , which do you plan to access next?
-                    <br><br> <b style='color: Olive;'> The escape plan: </b>
+                text="""<b style='color: DarkOrange;'> MAP: </b> <br> | Cell ⛓️| , | Infirmary 🏥| , | Laundry Room 🧺|,  | Kitchen 🍽️|  , | Warden's office ☎️| , | Helicopter Pad 🚁| , which do you plan to access next?
+                    <br><br> <b style='color: DarkOrange;'> ESCAPE PLAN: </b>
                     <ol>
                     <li>Go to the <i>Infirmary</i> 🏥 and get a strong sedative, which you will later mix into the food eaten by the prison guards.</li>
                     <li>Enter the <i>Kitchen</i> 🍽️ and disguise yourself as an employee of the facility. The <i>Laundry Room</i> 🧺 might have some spare guard uniforms that will fit you.</li>
                     <li>After sedating the guards, you need to call the helicopter to your location. Mr.Clean mentioned that the <i>warden</i> has a phone ☎️ in her office.</li>
                     <li>Get to the <i>Helicopter Pad</i> 🚁, and you're as good as free.</li>
-                    </ol>>""")
+                    </ol>""")
         else:
             dispatcher.utter_message(text="You cannot view the Map at the moment")
 
@@ -178,7 +178,7 @@ class AbleCheck(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         print(tracker.get_slot('nurse_away'))
         if tracker.get_slot('location_Infirmary') and tracker.get_slot('nurse_away'):
-            dispatcher.utter_message(text="Time is crucial now. Alone in the room, you find a cabinet with four ingredients: <i>Bioluminescent Algae</i> 🪸, <i>Sunflower 🌻</i>, <i>Lavender 🌸</i> and <i>Cayenne Pepper 🌶️</i>. A forgotten recipe for a potent sedative lies on the counter. <b>Guess the four anesthetic components in the correct order!</b>. <br> <b style='color: red;'> RECIPE </b>: <ol><li>I am fragrant and purple, bringing relaxation and calm. What am I?</li><li>I am tall and bright, a flower so cheery, with petals golden, and seeds you can eat, oh so seedy.</li><li>Spicy and red, I add the heat. Guess my name, this pepper so neat.</li><li>In the depths of the ocean, a magical sight. Multiple words describe my light.</li></ol> </br>.")
+            dispatcher.utter_message(text="Time is crucial now. Alone in the room, you find a cabinet with four ingredients: <i>Bioluminescent Algae</i> 🪸, <i>Sunflower 🌻</i>, <i>Lavender 🌸</i> and <i>Cayenne Pepper 🌶️</i>. A forgotten recipe for a potent sedative lies on the counter. <b>Guess the 4 anesthetic components in the correct order!</b> <br> <b style='color: red;'> RECIPE: </b> <ol><li>I am fragrant and purple, bringing relaxation and calm. What am I?</li><li>I am tall and bright, a flower so cheery, with petals golden, and seeds you can eat, oh so seedy.</li><li>Spicy and red, I add the heat. Guess my name, this pepper so neat.</li><li>In the depths of the ocean, a magical sight. Multiple words describe my light.</li></ol> </br>")
             #return [SlotSet("nurse_away", False)]
         else:
             dispatcher.utter_message(text="The trainee nurse is still in the <i>Infirmary</i> 🏥. You should be alone to look around if you don't want to get caught!")
@@ -213,7 +213,7 @@ class ShowLaundryRoom(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text="The pungent smell of detergent and the noise of the whirring washing machines momentarily stuns you as you sneak into the next room🧼🧴. <b>This definitely the Laundry Room</b>. <br>Looking around you can see <i>lockers</i> 🔒 lining the wall, as well as some <i>washing machines</i> 🫧 and a <i>dirty clothes basket</i> 🧺. <b>You can check those</b> - you might find something useful!")
+        dispatcher.utter_message(text="The pungent smell of detergent and the noise of the whirring washing machines momentarily stuns you as you sneak into the next room🧼🧴. <b>This is definitely the Laundry Room</b>. <br>Looking around you can see <i>lockers</i> 🔒 lining the wall, as well as some <i>washing machines</i> 🫧 and a <i>dirty clothes basket</i> 🧺. <b>You can check those</b> - you might find something useful!")
         return [SlotSet('location_Laundry_room', True), SlotSet("location_Heli_Pad", False), SlotSet("location_cell", False),SlotSet("location_Kitchen", False),SlotSet("location_Infirmary", False),SlotSet("location_office", False)]
 
 
@@ -233,11 +233,11 @@ class Show_locker_puzzles_or_other_unuseful_items(Action):
                 dispatcher.utter_message(text= """
                     In the dirty clothes basket, you find a handwritten note left behind 🔑.
                     <br>
-                    <b style='color: red;'> >CLUES:</b>
+                    <b style='color: red;'> CLUES: </b>
                     <ol>
                     <li>I am the first digit in here, but the second prime</li>
                     <li>I am the second digit in here, but I am the first prime 💭</li>
-                    <li>I am the lucky prime number</li>
+                    <li>I am the lucky prime number 🍀</li>
                     <li>I am the beginning but also the end, in addition I fade away and divided by I am infinity ♾️, I am neither positive nor negative but I am also both.</li>
                     <li>In card games 🃏, people sometimes mistake me as 6</li>
                     </ol>
@@ -375,7 +375,7 @@ class OfficeItems(Action):
             officeitem = [e['value'] for e in tracker.latest_message['entities'] if
                                e['entity'] == 'items_in_office']
             if 'telephone' in officeitem:
-                dispatcher.utter_message("With the phone in your hands, you contemplate your options💭. Should you take the risk and <b>call the son of the pilot</b> (Maverick) for assistance?<br> The seconds tick away, each one precious and fleeting. Make your move, for the outcome of your escape hangs in the balance ⚖️!") #FJSHFKSJDHSKJDHSKJFDHSJKFHSKJFHSKJFHSKJFHSJKFH
+                dispatcher.utter_message("With the phone in your hands, you contemplate your options💭. Maverick has given you the phone number of his son. Should you take the risk and <b>call the son 👦</b> for assistance?<br> The seconds tick away, each one precious and fleeting. Make your move, for the outcome of your escape hangs in the balance ⚖️!") #FJSHFKSJDHSKJDHSKJFDHSJKFHSKJFHSKJFHSKJFHSJKFH
                 return [SlotSet('phone_ready',True)]
             elif 'cabinet' in officeitem:
                 dispatcher.utter_message('The cabinet is full of files and papers you cant make sense of. Maybe try looking someplace else instead...')
