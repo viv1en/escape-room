@@ -589,6 +589,8 @@ nlu:
     - cayenne
     - paprica
     - Caynne
+    - cayenne pepper
+    - Cayenne pepper
 
 - synonym: Sunflower
   examples: |
@@ -602,6 +604,7 @@ nlu:
     - bioluminescent algae
     - Bioluminescent
     - Algae
+    - algae
 
 - synonym: Lavender
   examples: |
