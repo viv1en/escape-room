@@ -1,3 +1,4 @@
+
 version: "3-1"
 
 nlu:
@@ -528,6 +529,7 @@ nlu:
     - jake
     - jailer
     - jailerjake
+    
 - synonym: Prison Guard
   examples: |
     - Guard
@@ -536,7 +538,6 @@ nlu:
     - prisonguard
     - Prison warden
     
-
 - synonym: Janitor
   examples: |
     - Cleaner
@@ -550,6 +551,8 @@ nlu:
     - Captain
     - Airman
     - airman
+    - captain
+    - flyer
     
 
 
@@ -559,6 +562,7 @@ nlu:
     - infermary
     - infirmery
     - Infermary
+    
 - synonym: Kitchen
   examples: |
     - kitchen
@@ -576,12 +580,14 @@ nlu:
     - heRainbowop
     - landing pad
     - helicopter
+    - helicopter pad
 
 - synonym: Laundry room
   examples: |
     - Laundry
     - landry room
     - laundry
+    - laundryroom
 
 - synonym: Cayenne Pepper
   examples: |
@@ -619,12 +625,14 @@ nlu:
     - clothes
     - Clothes
     - Basket
+    - clothes basket
 
 - synonym: lockers
   examples: |
     - Locker
     - locker
     - Lockers
+    
 - synonym: washing machines
   examples: |
     - washingmachines
@@ -727,13 +735,17 @@ nlu:
     - alone
     - take the helicopter alone
     - leave them behind
+    - Leave 
+    
 
 - synonym: Invite
   examples: |
     - invite 
-    - take 
     - bring
     - let
     - take
+    - Bring
+    - Let
+    - Take
 
 
