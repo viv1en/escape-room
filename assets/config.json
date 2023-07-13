@@ -7,7 +7,7 @@
     "id": "prison-break",
     "background-image": "EscapeBoticsBackground.jpg",
     "api_url": "http://localhost:5005",
-    "welcome-message": "Welcome to the <i>EscapeRobotics</i> escape room 👾! <br> You will slip into the role of a renowned lawyer 🧳, who uncovered a massive web of corruption within a big corporation. After trying to pursue legal action through the court system, you were framed and dishonoured, before being thrown into a prison 😢⛓️.  Naturally, you have decided to escape the facility and reclaim your integrity. <b> You can start the game by greeting the bot.</b> This is all you need to know for now… Good luck and have fun 🍀!",
+    "welcome-message": "Welcome to the <i>EscapeBotics</i> game 👾! <br> You will slip into the role of a renowned lawyer 🧳, who uncovered a massive web of corruption within a big corporation. After trying to pursue legal action through the court system, you were framed and dishonoured, before being thrown into a prison 😢⛓️.  Naturally, you have decided to escape the facility and reclaim your integrity. <b> You can start the game by greeting the bot.</b> This is all you need to know for now… Good luck and have fun 🍀!",
     "chatbot-avatar": "EscapeBoticsChatbot.jpg",
     "user-avatar": "EscapeBoticsAvatar.jpg"
     }
